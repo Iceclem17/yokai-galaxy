@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Âmes d'Insaisissables - Yo-kai Watch Blasters - Yo-kai Galaxy</title>
+    <link rel="icon" type="image/png" href="../../../../images/icon.png" />
+    <link href="../style-page.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="../../../../">Accueil</a>
+            </div>
+            <div class="onglets">
+                <a href="../../../../#offres">Présentation</a>
+                <a href="../../../">Jeux</a>
+                <a href="../../../../qr-codes">Qr Codes</a>
+                <a href="../../../../quiz">Quiz</a>
+            </div>
+        </nav>
+
+        <div class="principal">
+            <h1>Âmes d'Insaisissables, Yo-Kai Watch Blasters</h1>
+            <div class="dropdown-class">
+                <div class="dropdown">
+                    <button onclick="toggleDropdown('dropdown1')">Trier par nom</button>
+                    <div class="dropdown-content" id="dropdown1">
+                        <button id="sortByNameAsc">De A-Z</button>
+                        <button id="sortByNameDesc">De Z-A</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button onclick="toggleDropdown('dropdown2')">Trier par stat</button>
+                    <div class="dropdown-content" id="dropdown2">
+                        <button id="sortByDescriptionAsc">De A-Z</button>
+                        <button id="sortByDescriptionDesc">De Z-A</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button onclick="toggleDropdown('dropdown3')">Trier par tribu</button>
+                    <div class="dropdown-content" id="dropdown3">
+                        <button id="sortByTribu">Trier par tribu</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button onclick="toggleDropdown('dropdown4')">Trier par ID</button>
+                    <div class="dropdown-content" id="dropdown4">
+                        <button id="sortByIdAsc">Croissant</button>
+                        <button id="sortByIdDesc">Décroissant</button>
+                    </div>
+                </div>
+            </div>
+            
+            <input type="text" id="searchBar" placeholder="Rechercher par nom...">
+            <script src="../script.js"></script>
+            <script src="../script2.js"></script>
+            
+            <div class="container">
+                <!-- Les ID des Tribus
+                Vaillants : 0
+                Mystérieux : 1
+                Costauds : 2
+                Mignons : 3
+                Bienveillants : 4
+                Sombres : 5
+                Sinistres : 6
+                Insaisissables : 7
+                Perfides : 8
+                Enma : 9
+                Wandroïdes : 10
+                Boss : 11
+                Aucune : 12
+                -->
+                <div class="item" data-tribu="7" data-id="348.0">
+                    <img src="../../../../images/ame-insaisissable.webp" alt="Image Insaisissables">
+                    <div class="text"><p>
+                        <b>Âme Anghihihille</b>
+                        <br><d>Guérit plus de PV sur un Yo-kai en cas de danger</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="7" data-id="368.0">
+                    <img src="../../../../images/ame-insaisissable.webp" alt="Image Insaisissables">
+                    <div class="text"><p>
+                        <b>Âme Bababou</b>
+                        <br><d>Faible hausse de la VIT. quand les PV sont au max</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="7" data-id="375.0">
+                    <img src="../../../../images/ame-insaisissable.webp" alt="Image Insaisissables">
+                    <div class="text"><p>
+                        <b>Âme Bananar</b>
+                        <br><d>Guérit un peu plus tes PV</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="7" data-id="377.0">
+                    <img src="../../../../images/ame-insaisissable.webp" alt="Image Insaisissables">
+                    <div class="text"><p>
+                        <b>Âme Carpitaine</b>
+                        <br><d>Réduit les dégâts de l'eau</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="7" data-id="372.0">
+                    <img src="../../../../images/ame-insaisissable.webp" alt="Image Insaisissables">
+                    <div class="text"><p>
+                        <b>Âme Claquille</b>
+                        <br><d>Faible hausse ATT. temp. collecte d'objets/orbes oni</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="7" data-id="373.0">
+                    <img src="../../../../images/ame-insaisissable.webp" alt="Image Insaisissables">
+                    <div class="text"><p>
+                        <b>Âme Cocpille</b>
+                        <br><d>Faible hausse ATT. temp. collecte d'objets/orbes oni</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="7" data-id="339.0">
+                    <img src="../../../../images/ame-insaisissable.webp" alt="Image Insaisissables">
+                    <div class="text"><p>
+                        <b>Âme Crampaud</b>
+                        <br><d>Tes effets d'envoût. négatif sont un peu plus durables</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="7" data-id="370.0">
+                    <img src="../../../../images/ame-insaisissable.webp" alt="Image Insaisissables">
+                    <div class="text"><p>
+                        <b>Âme Croquin</b>
+                        <br><d>PV restaurés peu à peu en cas de danger</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="7" data-id="376.0">
+                    <img src="../../../../images/ame-insaisissable.webp" alt="Image Insaisissables">
+                    <div class="text"><p>
+                        <b>Âme Draconfus</b>
+                        <br><d>Faible hausse des stats en cas d'absence d'allié</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="7" data-id="360.0">
+                    <img src="../../../../images/ame-insaisissable.webp" alt="Image Insaisissables">
+                    <div class="text"><p>
+                        <b>Âme Dracounet</b>
+                        <br><d>Faible hausse de l'attaque en cas de danger</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="7" data-id="362.0">
+                    <img src="../../../../images/ame-insaisissable.webp" alt="Image Insaisissables">
+                    <div class="text"><p>
+                        <b>Âme Dragô</b>
+                        <br><d>Hausse d'attaque en cas de danger</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="7" data-id="357.0">
+                    <img src="../../../../images/ame-insaisissable.webp" alt="Image Insaisissables">
+                    <div class="text"><p>
+                        <b>Âme Ed Mémoire</b>
+                        <br><d>Chargement de la jauge d'âme un peu plus rapide</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="7" data-id="371.0">
+                    <img src="../../../../images/ame-insaisissable.webp" alt="Image Insaisissables">
+                    <div class="text"><p>
+                        <b>Âme Inisquale</b>
+                        <br><d>PV restaurés peu à peu en cas de danger</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="7" data-id="374.0">
+                    <img src="../../../../images/ame-insaisissable.webp" alt="Image Insaisissables">
+                    <div class="text"><p>
+                        <b>Âme Jacquasseur</b>
+                        <br><d>Attire un peu plus l'attention des ennemis</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="7" data-id="345.0">
+                    <img src="../../../../images/ame-insaisissable.webp" alt="Image Insaisissables">
+                    <div class="text"><p>
+                        <b>Âme Jérémya</b>
+                        <br><d>PV restaurés peu à peu lors du chargement de l'att.</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="7" data-id="344.0">
+                    <img src="../../../../images/ame-insaisissable.webp" alt="Image Insaisissables">
+                    <div class="text"><p>
+                        <b>Âme Maudieuse</b>
+                        <br><d>PV restaurés peu à peu lors du chargement de l'att.</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="7" data-id="349.0">
+                    <img src="../../../../images/ame-insaisissable.webp" alt="Image Insaisissables">
+                    <div class="text"><p>
+                        <b>Âme Méroubadour</b>
+                        <br><d>Guérit plus de PV sur un Yo-kai en cas de danger</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="7" data-id="367.0">
+                    <img src="../../../../images/ame-insaisissable.webp" alt="Image Insaisissables">
+                    <div class="text"><p>
+                        <b>Âme Mlle Coucou</b>
+                        <br><d>Chargement de la jauge d'att. un peu plus rapide</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="7" data-id="351.0">
+                    <img src="../../../../images/ame-insaisissable.webp" alt="Image Insaisissables">
+                    <div class="text"><p>
+                        <b>Âme Murhaine</b>
+                        <br><d>Un peu de PV restaurés en cas de défaite ennemie</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="7" data-id="341.0">
+                    <img src="../../../../images/ame-insaisissable.webp" alt="Image Insaisissables">
+                    <div class="text"><p>
+                        <b>Âme Nénunoko</b>
+                        <br><d>Hausse de la VIT. en cas de danger</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="7" data-id="340.0">
+                    <img src="../../../../images/ame-insaisissable.webp" alt="Image Insaisissables">
+                    <div class="text"><p>
+                        <b>Âme Noko</b>
+                        <br><d>Faible hausse de la VIT. en cas de danger</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="7" data-id="382.0">
+                    <img src="../../../../images/ame-insaisissable.webp" alt="Image Insaisissables">
+                    <div class="text"><p>
+                        <b>Âme Octorgombre</b>
+                        <br><d>PV restaurés régulièrement si invisible pour les ennemis</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="7" data-id="381.0">
+                    <img src="../../../../images/ame-insaisissable.webp" alt="Image Insaisissables">
+                    <div class="text"><p>
+                        <b>Âme Octorgone</b>
+                        <br><d>Chargement de la jauge d'attaque plus rapide</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="7" data-id="342.0">
+                    <img src="../../../../images/ame-insaisissable.webp" alt="Image Insaisissables">
+                    <div class="text"><p>
+                        <b>Âme Pandanoko</b>
+                        <br><d>Effet d'envoûtement positif plus durable sur soi</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="7" data-id="355.0">
+                    <img src="../../../../images/ame-insaisissable.webp" alt="Image Insaisissables">
+                    <div class="text"><p>
+                        <b>Âme Poulpater</b>
+                        <br><d>Renvoie partiellement des dégâts quand attaqué</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="7" data-id="354.0">
+                    <img src="../../../../images/ame-insaisissable.webp" alt="Image Insaisissables">
+                    <div class="text"><p>
+                        <b>Âme Poulpatouch</b>
+                        <br><d>Renvoie partiellem. légers dégâts quand attaqué</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="7" data-id="363.0">
+                    <img src="../../../../images/ame-insaisissable.webp" alt="Image Insaisissables">
+                    <div class="text"><p>
+                        <b>Âme Robodracou</b>
+                        <br><d>Hausse des stats quand jauge d'âme pleine</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="7" data-id="343.0">
+                    <img src="../../../../images/ame-insaisissable.webp" alt="Image Insaisissables">
+                    <div class="text"><p>
+                        <b>Âme Robonoko</b>
+                        <br><d>Hausse des stats quand jauge d'âme pleine</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="7" data-id="352.0">
+                    <img src="../../../../images/ame-insaisissable.webp" alt="Image Insaisissables">
+                    <div class="text"><p>
+                        <b>Âme Saumhonni</b>
+                        <br><d>Un peu de PV restaurés en cas de défaite ennemie</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="7" data-id="457.0">
+                    <img src="../../../../images/ame-insaisissable.webp" alt="Image Insaisissables">
+                    <div class="text"><p>
+                        <b>Âme Scintinoko</b>
+                        <br><d>Forte hausse de la VIT.</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="7" data-id="359.0">
+                    <img src="../../../../images/ame-insaisissable.webp" alt="Image Insaisissables">
+                    <div class="text"><p>
+                        <b>Âme Scolérique</b>
+                        <br><d>Hausse de puissance des coups critiques</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="7" data-id="358.0">
+                    <img src="../../../../images/ame-insaisissable.webp" alt="Image Insaisissables">
+                    <div class="text"><p>
+                        <b>Âme Scoltine</b>
+                        <br><d>Faible hausse de puissance des coups critiques</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="7" data-id="361.0">
+                    <img src="../../../../images/ame-insaisissable.webp" alt="Image Insaisissables">
+                    <div class="text"><p>
+                        <b>Âme Sire Dragon</b>
+                        <br><d>Hausse d'attaque en cas de danger</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="7" data-id="366.0">
+                    <img src="../../../../images/ame-insaisissable.webp" alt="Image Insaisissables">
+                    <div class="text"><p>
+                        <b>Âme Sireine-mère</b>
+                        <br><d>Chargement de la jauge d'âme plus rapide</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="7" data-id="364.0">
+                    <img src="../../../../images/ame-insaisissable.webp" alt="Image Insaisissables">
+                    <div class="text"><p>
+                        <b>Âme Sirénée</b>
+                        <br><d>Faible hausse de l'attaque quand les PV sont au max</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="7" data-id="365.0">
+                    <img src="../../../../images/ame-insaisissable.webp" alt="Image Insaisissables">
+                    <div class="text"><p>
+                        <b>Âme Sirènité</b>
+                        <br><d>Hausse de l'attaque quand les PV sont au max</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="7" data-id="390.0">
+                    <img src="../../../../images/ame-insaisissable.webp" alt="Image Insaisissables">
+                    <div class="text"><p>
+                        <b>Âme Slurpent</b>
+                        <br><d>Hausse ATT. temp. lors de collecte d'objects/orbes oni</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="7" data-id="369.0">
+                    <img src="../../../../images/ame-insaisissable.webp" alt="Image Insaisissables">
+                    <div class="text"><p>
+                        <b>Âme Tourneboul</b>
+                        <br><d>Faible hausse de la VIT. quand les PV sont au max</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="7" data-id="350.0">
+                    <img src="../../../../images/ame-insaisissable.webp" alt="Image Insaisissables">
+                    <div class="text"><p>
+                        <b>Âme Urnaconda</b>
+                        <br><d>Guérit plus de PV sur un Yo-kai en cas de danger</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="7" data-id="353.0">
+                    <img src="../../../../images/ame-insaisissable.webp" alt="Image Insaisissables">
+                    <div class="text"><p>
+                        <b>Âme Vexturgeon</b>
+                        <br><d>Augm. légèrement dégâts sur ennemis en danger</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="7" data-id="380.0">
+                    <img src="../../../../images/ame-insaisissable.webp" alt="Image Insaisissables">
+                    <div class="text"><p>
+                        <b>Âme Vipairflay</b>
+                        <br><d>Ralentit légèrement la perte de la jauge d'attaque</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="7" data-id="379.0">
+                    <img src="../../../../images/ame-insaisissable.webp" alt="Image Insaisissables">
+                    <div class="text"><p>
+                        <b>Âme Vipérâle</b>
+                        <br><d>Faible hausse des stats après réanimation</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="7" data-id="378.0">
+                    <img src="../../../../images/ame-insaisissable.webp" alt="Image Insaisissables">
+                    <div class="text"><p>
+                        <b>Âme Vipètesec</b>
+                        <br><d>Absorbe un peu de PV en attaquant</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="7" data-id="346.0">
+                    <img src="../../../../images/ame-insaisissable.webp" alt="Image Insaisissables">
+                    <div class="text"><p>
+                        <b>Âme Whisper</b>
+                        <br><d>Un peu plus de chance de lancer c. crit. sur le groupe</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="7" data-id="347.0">
+                    <img src="../../../../images/ame-insaisissable.webp" alt="Image Insaisissables">
+                    <div class="text"><p>
+                        <b>Âme Whispocrates</b>
+                        <br><d>Un peu plus de chance de lancer c. crit. sur le groupe</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="7" data-id="356.0">
+                    <img src="../../../../images/ame-insaisissable.webp" alt="Image Insaisissables">
+                    <div class="text"><p>
+                        <b>Âme Yvantouse</b>
+                        <br><d>Chargement de la jauge d'âme un peu plus rapide</d></p>
+                    </div>
+                </div>
+                <!-- Ajoutez d'autres divs ici -->
+            </div>
+        </div>
+    </header>
+</body>
+</html>
+  

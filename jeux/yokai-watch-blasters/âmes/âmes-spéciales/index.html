@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Âmes spéciales - Yo-kai Watch Blasters - Yo-kai Galaxy</title>
+    <link rel="icon" type="image/png" href="../../../../images/icon.png" />
+    <link href="../style-page.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="../../../../">Accueil</a>
+            </div>
+            <div class="onglets">
+                <a href="../../../../#offres">Présentation</a>
+                <a href="../../../">Jeux</a>
+                <a href="../../../../qr-codes">Qr Codes</a>
+                <a href="../../../../quiz">Quiz</a>
+            </div>
+        </nav>
+
+        <div class="principal">
+            <h1>Âmes spéciales, Yo-Kai Watch Blasters</h1>
+            <div class="dropdown-class">
+                <div class="dropdown">
+                    <button onclick="toggleDropdown('dropdown1')">Trier par nom</button>
+                    <div class="dropdown-content" id="dropdown1">
+                        <button id="sortByNameAsc">De A-Z</button>
+                        <button id="sortByNameDesc">De Z-A</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button onclick="toggleDropdown('dropdown2')">Trier par stat</button>
+                    <div class="dropdown-content" id="dropdown2">
+                        <button id="sortByDescriptionAsc">De A-Z</button>
+                        <button id="sortByDescriptionDesc">De Z-A</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button onclick="toggleDropdown('dropdown3')">Trier par tribu</button>
+                    <div class="dropdown-content" id="dropdown3">
+                        <button id="sortByTribu">Trier par tribu</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button onclick="toggleDropdown('dropdown4')">Trier par ID</button>
+                    <div class="dropdown-content" id="dropdown4">
+                        <button id="sortByIdAsc">Croissant</button>
+                        <button id="sortByIdDesc">Décroissant</button>
+                    </div>
+                </div>
+            </div>
+            
+            <input type="text" id="searchBar" placeholder="Rechercher par nom...">
+            <script src="../script.js"></script>
+            <script src="../script2.js"></script>
+            
+            <div class="container">
+                <!-- Les ID des Tribus
+                Vaillants : 0
+                Mystérieux : 1
+                Costauds : 2
+                Mignons : 3
+                Bienveillants : 4
+                Sombres : 5
+                Sinistres : 6
+                Insaisissables : 7
+                Perfides : 8
+                Enma : 9
+                Wandroïdes : 10
+                Boss : 11
+                Aucune : 12
+                -->
+                <div class="item" data-tribu="12" data-id="1001.0">
+                    <img src="../../../../images/ame-speciale.webp" alt="Image Aucune">
+                    <div class="text"><p>
+                        <b>Âme malveillante</b>
+                        <br><d>Hausse de toutes les stats si envoûté par les ennemis
+                        <br>Obtenable en fusionnant âme Contrarioni et âme Hennimi</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="12" data-id="1005.0">
+                    <img src="../../../../images/ame-speciale.webp" alt="Image Aucune">
+                    <div class="text"><p>
+                        <b>Âme survivante</b>
+                        <br><d>Réduit le nombre de PV guéris par les ennemies
+                        <br>Obtenable en fusionnant âme Hibrouille et âme Momonyan</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="12" data-id="1007.0">
+                    <img src="../../../../images/ame-speciale.webp" alt="Image Aucune">
+                    <div class="text"><p>
+                        <b>Âme compétente</b>
+                        <br><d>Invincible lors de l'installation de pièges
+                        <br>Obtenable en fusionnant âme Bananar et âme Geeko</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="12" data-id="1014.0">
+                    <img src="../../../../images/ame-speciale.webp" alt="Image Aucune">
+                    <div class="text"><p>
+                        <b>Âme irrépressible</b>
+                        <br><d>L'énergie ne diminue pas
+                        <br>Obtenable en fusionnant âme Vito et âme Samuren</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="12" data-id="1018.0">
+                    <img src="../../../../images/ame-speciale.webp" alt="Image Aucune">
+                    <div class="text"><p>
+                        <b>Âme d'invocateur</b>
+                        <br><d>Les Orbes G apparaissent plus souvent
+                        <br>Obtenable en fusionnant âme Écchinose et âme Pandanoko</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="12" data-id="1019.0">
+                    <img src="../../../../images/ame-speciale.webp" alt="Image Aucune">
+                    <div class="text"><p>
+                        <b>Âme altruiste</b>
+                        <br><d>Effets des objets partagés avec les alliés à proximité
+                        <br>Obtenable en fusionnant âme Bastata et âme Ratatam</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="12" data-id="1020.0">
+                    <img src="../../../../images/ame-speciale.webp" alt="Image Aucune">
+                    <div class="text"><p>
+                        <b>Âme de superstar</b>
+                        <br><d>Amitié plus probable avec l'ennemi
+                        <br>Obtenable en fusionnant âme Choubidou et âme Donjouant</d></p>
+                    </div>
+                </div>
+                <!-- Ajoutez d'autres divs ici -->
+            </div>
+        </div>
+    </header>
+</body>
+</html>
+  

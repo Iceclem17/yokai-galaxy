@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Âmes de Bienveillants - Yo-kai Watch Blasters - Yo-kai Galaxy</title>
+    <link rel="icon" type="image/png" href="../../../../images/icon.png" />
+    <link href="../style-page.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="../../../../">Accueil</a>
+            </div>
+            <div class="onglets">
+                <a href="../../../../#offres">Présentation</a>
+                <a href="../../../">Jeux</a>
+                <a href="../../../../qr-codes">Qr Codes</a>
+                <a href="../../../../quiz">Quiz</a>
+            </div>
+        </nav>
+
+        <div class="principal">
+            <h1>Âmes de Bienveillants, Yo-Kai Watch Blasters</h1>
+            <div class="dropdown-class">
+                <div class="dropdown">
+                    <button onclick="toggleDropdown('dropdown1')">Trier par nom</button>
+                    <div class="dropdown-content" id="dropdown1">
+                        <button id="sortByNameAsc">De A-Z</button>
+                        <button id="sortByNameDesc">De Z-A</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button onclick="toggleDropdown('dropdown2')">Trier par stat</button>
+                    <div class="dropdown-content" id="dropdown2">
+                        <button id="sortByDescriptionAsc">De A-Z</button>
+                        <button id="sortByDescriptionDesc">De Z-A</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button onclick="toggleDropdown('dropdown3')">Trier par tribu</button>
+                    <div class="dropdown-content" id="dropdown3">
+                        <button id="sortByTribu">Trier par tribu</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button onclick="toggleDropdown('dropdown4')">Trier par ID</button>
+                    <div class="dropdown-content" id="dropdown4">
+                        <button id="sortByIdAsc">Croissant</button>
+                        <button id="sortByIdDesc">Décroissant</button>
+                    </div>
+                </div>
+            </div>
+            
+            <input type="text" id="searchBar" placeholder="Rechercher par nom...">
+            <script src="../script.js"></script>
+            <script src="../script2.js"></script>
+            
+            <div class="container">
+                <!-- Les ID des Tribus
+                Vaillants : 0
+                Mystérieux : 1
+                Costauds : 2
+                Mignons : 3
+                Bienveillants : 4
+                Sombres : 5
+                Sinistres : 6
+                Insaisissables : 7
+                Perfides : 8
+                Enma : 9
+                Wandroïdes : 10
+                Boss : 11
+                Aucune : 12
+                -->
+                <div class="item" data-tribu="4" data-id="452.0">
+                    <img src="../../../../images/ame-bienveillant.webp" alt="Image Bienveillants">
+                    <div class="text"><p>
+                        <b>Âme Alga Sensei</b>
+                        <br><d>Quand PV à 0, ils seront parfois restaurés à 1 PV</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="4" data-id="205.0">
+                    <img src="../../../../images/ame-bienveillant.webp" alt="Image Bienveillants">
+                    <div class="text"><p>
+                        <b>Âme Algacarena</b>
+                        <br><d>Hausse de la VIT. en cas de danger</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="4" data-id="202.0">
+                    <img src="../../../../images/ame-bienveillant.webp" alt="Image Bienveillants">
+                    <div class="text"><p>
+                        <b>Âme Amoiz</b>
+                        <br><d>Faible hausse ATT. temp. collecte d'objets/orbes oni</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="4" data-id="387.0">
+                    <img src="../../../../images/ame-bienveillant.webp" alt="Image Bienveillants">
+                    <div class="text"><p>
+                        <b>Âme Camaïeul</b>
+                        <br><d>Réanime les alliés plus vite</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="4" data-id="219.0">
+                    <img src="../../../../images/ame-bienveillant.webp" alt="Image Bienveillants">
+                    <div class="text"><p>
+                        <b>Âme Canastelle</b>
+                        <br><d>Tes PV sont restaurés graduellement</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="4" data-id="237.0">
+                    <img src="../../../../images/ame-bienveillant.webp" alt="Image Bienveillants">
+                    <div class="text"><p>
+                        <b>Âme Dédé</b>
+                        <br><d>Un peu plus de chance de lancer des coups critiques</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="4" data-id="238.0">
+                    <img src="../../../../images/ame-bienveillant.webp" alt="Image Bienveillants">
+                    <div class="text"><p>
+                        <b>Âme Dédestin</b>
+                        <br><d>Un peu plus de chance de lancer des coups critiques</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="4" data-id="413.0">
+                    <img src="../../../../images/ame-bienveillant.webp" alt="Image Bienveillants">
+                    <div class="text"><p>
+                        <b>Âme Faisanyan</b>
+                        <br><d>Guérit plus de PV sur un Yo-kai en cas de danger</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="4" data-id="214.0">
+                    <img src="../../../../images/ame-bienveillant.webp" alt="Image Bienveillants">
+                    <div class="text"><p>
+                        <b>Âme Felipaix</b>
+                        <br><d>Réduit légèrement les dégâts de la terre</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="4" data-id="210.0">
+                    <img src="../../../../images/ame-bienveillant.webp" alt="Image Bienveillants">
+                    <div class="text"><p>
+                        <b>Âme Grainpère</b>
+                        <br><d>Réanime les alliés un peu plus vite</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="4" data-id="208.0">
+                    <img src="../../../../images/ame-bienveillant.webp" alt="Image Bienveillants">
+                    <div class="text"><p>
+                        <b>Âme Granpapéti</b>
+                        <br><d>PV restaurés peu à peu en cas de danger</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="4" data-id="224.0">
+                    <img src="../../../../images/ame-bienveillant.webp" alt="Image Bienveillants">
+                    <div class="text"><p>
+                        <b>Âme Grégrigry</b>
+                        <br><d>Tes PV sont restaurés régulièrement</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="4" data-id="227.0">
+                    <img src="../../../../images/ame-bienveillant.webp" alt="Image Bienveillants">
+                    <div class="text"><p>
+                        <b>Âme Hyprapillon</b>
+                        <br><d>Effet d'envoûtement positif plus durable sur soi</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="4" data-id="221.0">
+                    <img src="../../../../images/ame-bienveillant.webp" alt="Image Bienveillants">
+                    <div class="text"><p>
+                        <b>Âme Ivanupieds</b>
+                        <br><d>PV restaurés lors de collecte d'objets/orbes oni</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="4" data-id="232.0">
+                    <img src="../../../../images/ame-bienveillant.webp" alt="Image Bienveillants">
+                    <div class="text"><p>
+                        <b>Âme Jojojoyeux</b>
+                        <br><d>Les PV des alliés sont restaurés graduellement</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="4" data-id="244.0">
+                    <img src="../../../../images/ame-bienveillant.webp" alt="Image Bienveillants">
+                    <div class="text"><p>
+                        <b>Âme Kyrycorne</b>
+                        <br><d>Guérit des PV suppl. sur un Yo-Kai en cas de danger</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="4" data-id="243.0">
+                    <img src="../../../../images/ame-bienveillant.webp" alt="Image Bienveillants">
+                    <div class="text"><p>
+                        <b>Âme Kyryn</b>
+                        <br><d>Guérit des PV suppl. sur un Yo-Kai en cas de danger</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="4" data-id="218.0">
+                    <img src="../../../../images/ame-bienveillant.webp" alt="Image Bienveillants">
+                    <div class="text"><p>
+                        <b>Âme Lacanne</b>
+                        <br><d>Tes PV sont restaurés graduellement</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="4" data-id="223.0">
+                    <img src="../../../../images/ame-bienveillant.webp" alt="Image Bienveillants">
+                    <div class="text"><p>
+                        <b>Âme Lulutin</b>
+                        <br><d>Tes PV sont restaurés graduellement</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="4" data-id="215.0">
+                    <img src="../../../../images/ame-bienveillant.webp" alt="Image Bienveillants">
+                    <div class="text"><p>
+                        <b>Âme M. Felipaix</b>
+                        <br><d>Réduit les dégâts de la terre</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="4" data-id="229.0">
+                    <img src="../../../../images/ame-bienveillant.webp" alt="Image Bienveillants">
+                    <div class="text"><p>
+                        <b>Âme Métaureaulog</b>
+                        <br><d>Faible hausse de la DÉF. quand les PV sont au max</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="4" data-id="213.0">
+                    <img src="../../../../images/ame-bienveillant.webp" alt="Image Bienveillants">
+                    <div class="text"><p>
+                        <b>Âme Mme Papilla</b>
+                        <br><d>Réanime les alliés un peu plus vite</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="4" data-id="220.0">
+                    <img src="../../../../images/ame-bienveillant.webp" alt="Image Bienveillants">
+                    <div class="text"><p>
+                        <b>Âme Nomoné</b>
+                        <br><d>Un peu de PV rest. lors de collecte d'objets/orbes oni</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="4" data-id="222.0">
+                    <img src="../../../../images/ame-bienveillant.webp" alt="Image Bienveillants">
+                    <div class="text"><p>
+                        <b>Âme Noproblemo</b>
+                        <br><d>Tes PV sont restaurés graduellement</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="4" data-id="204.0">
+                    <img src="../../../../images/ame-bienveillant.webp" alt="Image Bienveillants">
+                    <div class="text"><p>
+                        <b>Âme Noripop</b>
+                        <br><d>Faible hausse de la VIT. en cas de danger</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="4" data-id="453.0">
+                    <img src="../../../../images/ame-bienveillant.webp" alt="Image Bienveillants">
+                    <div class="text"><p>
+                        <b>Âme Odyssényan</b>
+                        <br><d>Plus de chance d'infliger des coups critiques</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="4" data-id="240.0">
+                    <img src="../../../../images/ame-bienveillant.webp" alt="Image Bienveillants">
+                    <div class="text"><p>
+                        <b>Âme Omnitonton</b>
+                        <br><d>Hausse de la DÉF. lors du chargement de l'attaque</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="4" data-id="212.0">
+                    <img src="../../../../images/ame-bienveillant.webp" alt="Image Bienveillants">
+                    <div class="text"><p>
+                        <b>Âme Papilla</b>
+                        <br><d>Réanime les alliés un peu plus vite</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="4" data-id="225.0">
+                    <img src="../../../../images/ame-bienveillant.webp" alt="Image Bienveillants">
+                    <div class="text"><p>
+                        <b>Âme Papiltation</b>
+                        <br><d>Effet d'envoût. positif un peu plus durable sur groupe</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="4" data-id="226.0">
+                    <img src="../../../../images/ame-bienveillant.webp" alt="Image Bienveillants">
+                    <div class="text"><p>
+                        <b>Âme Papiltension</b>
+                        <br><d>Effet d'envoût. positif un peu plus durable sur groupe</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="4" data-id="233.0">
+                    <img src="../../../../images/ame-bienveillant.webp" alt="Image Bienveillants">
+                    <div class="text"><p>
+                        <b>Âme Paradoxa</b>
+                        <br><d>Faible hausse des stats quand les PV sont au max</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="4" data-id="216.0">
+                    <img src="../../../../images/ame-bienveillant.webp" alt="Image Bienveillants">
+                    <div class="text"><p>
+                        <b>Âme Parasolal</b>
+                        <br><d>Augmente légèrement les effets de la garde</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="4" data-id="203.0">
+                    <img src="../../../../images/ame-bienveillant.webp" alt="Image Bienveillants">
+                    <div class="text"><p>
+                        <b>Âme Pikor</b>
+                        <br><d>PV restaurés peu à peu en cas de danger</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="4" data-id="234.0">
+                    <img src="../../../../images/ame-bienveillant.webp" alt="Image Bienveillants">
+                    <div class="text"><p>
+                        <b>Âme Potaumorose</b>
+                        <br><d>Faible hausse des stats quand les PV sont au max</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="4" data-id="209.0">
+                    <img src="../../../../images/ame-bienveillant.webp" alt="Image Bienveillants">
+                    <div class="text"><p>
+                        <b>Âme Puissanfon</b>
+                        <br><d>PV restaurés peu à peu en cas de danger</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="4" data-id="235.0">
+                    <img src="../../../../images/ame-bienveillant.webp" alt="Image Bienveillants">
+                    <div class="text"><p>
+                        <b>Âme Ratatam</b>
+                        <br><d>Faible hausse des stats quand jauge d'âme pleine</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="4" data-id="211.0">
+                    <img src="../../../../images/ame-bienveillant.webp" alt="Image Bienveillants">
+                    <div class="text"><p>
+                        <b>Âme Robopapéti</b>
+                        <br><d>Hausse des stats quand jauge d'âme pleine</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="4" data-id="231.0">
+                    <img src="../../../../images/ame-bienveillant.webp" alt="Image Bienveillants">
+                    <div class="text"><p>
+                        <b>Âme Sabrille</b>
+                        <br><d>Faible hausse ATT. temp. après défaite de l'ennemi</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="4" data-id="207.0">
+                    <img src="../../../../images/ame-bienveillant.webp" alt="Image Bienveillants">
+                    <div class="text"><p>
+                        <b>Âme Salsalga</b>
+                        <br><d>Faible hausse de la DÉF. en cas de danger</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="4" data-id="217.0">
+                    <img src="../../../../images/ame-bienveillant.webp" alt="Image Bienveillants">
+                    <div class="text"><p>
+                        <b>Âme Scarasol</b>
+                        <br><d>PV restaurés régulièrement lors d'une garde</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="4" data-id="236.0">
+                    <img src="../../../../images/ame-bienveillant.webp" alt="Image Bienveillants">
+                    <div class="text"><p>
+                        <b>Âme Supernoël</b>
+                        <br><d>Faible hausse des stats quand jauge d'âme pleine</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="4" data-id="241.0">
+                    <img src="../../../../images/ame-bienveillant.webp" alt="Image Bienveillants">
+                    <div class="text"><p>
+                        <b>Âme Tata Aura</b>
+                        <br><d>Les PV des alliés sont restaurés graduellement</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="4" data-id="242.0">
+                    <img src="../../../../images/ame-bienveillant.webp" alt="Image Bienveillants">
+                    <div class="text"><p>
+                        <b>Âme Tata Câlin</b>
+                        <br><d>Effet d'envoûtement positif plus durable sur soi</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="4" data-id="230.0">
+                    <img src="../../../../images/ame-bienveillant.webp" alt="Image Bienveillants">
+                    <div class="text"><p>
+                        <b>Âme Tauracle</b>
+                        <br><d>Hausse de la DÉF. quand les PV sont au max</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="4" data-id="239.0">
+                    <img src="../../../../images/ame-bienveillant.webp" alt="Image Bienveillants">
+                    <div class="text"><p>
+                        <b>Âme Tontonerre</b>
+                        <br><d>Réduit légèrement les dégâts de la foudre</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="4" data-id="228.0">
+                    <img src="../../../../images/ame-bienveillant.webp" alt="Image Bienveillants">
+                    <div class="text"><p>
+                        <b>Âme Vitapillon</b>
+                        <br><d>Effet d'envoûtement positif plus durable sur soi</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="4" data-id="206.0">
+                    <img src="../../../../images/ame-bienveillant.webp" alt="Image Bienveillants">
+                    <div class="text"><p>
+                        <b>Âme Wakapoeira</b>
+                        <br><d>Faible hausse de l'attaque en cas de danger</d></p>
+                    </div>
+                </div>
+                <!-- Ajoutez d'autres divs ici -->
+            </div>
+        </div>
+    </header>
+</body>
+</html>
+  

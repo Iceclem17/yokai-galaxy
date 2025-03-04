@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Âmes de Mignons - Yo-kai Watch Blasters - Yo-kai Galaxy</title>
+    <link rel="icon" type="image/png" href="../../../../images/icon.png" />
+    <link href="../style-page.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="../../../../">Accueil</a>
+            </div>
+            <div class="onglets">
+                <a href="../../../../#offres">Présentation</a>
+                <a href="../../../">Jeux</a>
+                <a href="../../../../qr-codes">Qr Codes</a>
+                <a href="../../../../quiz">Quiz</a>
+            </div>
+        </nav>
+
+        <div class="principal">
+            <h1>Âmes de Mignons, Yo-Kai Watch Blasters</h1>
+            <div class="dropdown-class">
+                <div class="dropdown">
+                    <button onclick="toggleDropdown('dropdown1')">Trier par nom</button>
+                    <div class="dropdown-content" id="dropdown1">
+                        <button id="sortByNameAsc">De A-Z</button>
+                        <button id="sortByNameDesc">De Z-A</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button onclick="toggleDropdown('dropdown2')">Trier par stat</button>
+                    <div class="dropdown-content" id="dropdown2">
+                        <button id="sortByDescriptionAsc">De A-Z</button>
+                        <button id="sortByDescriptionDesc">De Z-A</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button onclick="toggleDropdown('dropdown3')">Trier par tribu</button>
+                    <div class="dropdown-content" id="dropdown3">
+                        <button id="sortByTribu">Trier par tribu</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button onclick="toggleDropdown('dropdown4')">Trier par ID</button>
+                    <div class="dropdown-content" id="dropdown4">
+                        <button id="sortByIdAsc">Croissant</button>
+                        <button id="sortByIdDesc">Décroissant</button>
+                    </div>
+                </div>
+            </div>
+            
+            <input type="text" id="searchBar" placeholder="Rechercher par nom...">
+            <script src="../script.js"></script>
+            <script src="../script2.js"></script>
+            
+            <div class="container">
+                <!-- Les ID des Tribus
+                Vaillants : 0
+                Mystérieux : 1
+                Costauds : 2
+                Mignons : 3
+                Bienveillants : 4
+                Sombres : 5
+                Sinistres : 6
+                Insaisissables : 7
+                Perfides : 8
+                Enma : 9
+                Wandroïdes : 10
+                Boss : 11
+                Aucune : 12
+                -->
+                <div class="item" data-tribu="3" data-id="196.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Angélik</b>
+                        <br><d>Réduit légèrement les dégâts de la glace</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="176.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Appak</b>
+                        <br><d>Réduit les dégâts de l'eau</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="187.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Baku</b>
+                        <br><d>Augmente légèrement le nombre de PV absorbés</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="188.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Bakuku</b>
+                        <br><d>Augmente légèrement le nombre de PV absorbés</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="167.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Bandinyan</b>
+                        <br><d>Faible hausse de l'attaque en cas de danger</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="197.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Blizzaria</b>
+                        <br><d>Réduit les dégâts de la glace</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="197.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Blizzie</b>
+                        <br><d>Augmente les dégâts des attaques de glace</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="170.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Boucanyan</b>
+                        <br><d>Effet d'envoûtement positif un peu plus durable sur soi</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="168.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Buchinyan</b>
+                        <br><d>Toutes les stats renforcées en cas de danger</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="148.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Chihuaglagla</b>
+                        <br><d>Réduit légèrement les dégâts de la glace</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="412.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Chimpanyan</b>
+                        <br><d>Faible hausse VIT. temp. tour les alliés guéris</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="150.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Cho-cho</b>
+                        <br><d>Hausse de puissance des coups critiques</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="193.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Choubidou</b>
+                        <br><d>Effet d'envoût. positif un peu plus durable sur groupe</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="146.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Cigaillard</b>
+                        <br><d>Faible hausse de la VIT.</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="145.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Cigalopin</b>
+                        <br><d>Faible hausse de la VIT.</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="147.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Cigazouille</b>
+                        <br><d>Faible hausse de la VIT.</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="198.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Damona</b>
+                        <br><d>Absorbe une partie des PV en attaquant</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="386.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Déballerine</b>
+                        <br><d>Chargement de la jauge d'att. plus rapide</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="165.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Diamanyan</b>
+                        <br><d>Faible hausse de DÉF. lors du chargement d'attaque</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="162.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Émeranyan</b>
+                        <br><d>Faible hausse de DÉF. lors du chargement d'attaque</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="166.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Épinyan</b>
+                        <br><d>Renvoie partiellem. légers dégâts quand attaqué</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="199.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Faux Kappa</b>
+                        <br><d>PV restaurés peu à peu lors du chargement de l'att.</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="149.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Froahuahua</b>
+                        <br><d>Réduit les dégâts de la glace</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="141.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Gambeth</b>
+                        <br><d>Les PV des alliés sont restaurés graduellement</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="171.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Jetnyan</b>
+                        <br><d>Début de mission avec jauge d'âme pleine</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="186.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Jibakoma</b>
+                        <br><d>Réduit les dégâts du feu</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="153.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Jibanyan</b>
+                        <br><d>Faible hausse de la VIT.</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="406.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Jibanyan B</b>
+                        <br><d>Augmente légèrement puissance att. du bouton X</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="154.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Jibanyan S </b>
+                        <br><d>Forte hausse de la VIT.</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="450.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Jiganyan</b>
+                        <br><d>Hausse de l'attaque temp. après défaite de l'ennemi</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="175.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Kappacap</b>
+                        <br><d>Réduit légèrement les dégâts de l'eau</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="200.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Kappadissi</b>
+                        <br><d>Augmente les dégâts sur tous ennemis non-boss</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="177.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Kappaloha</b>
+                        <br><d>Réduit les dégâts de l'eau</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="156.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Kiwinyan</b>
+                        <br><d>Chargement de la jauge d'âme plus rapide</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="182.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Komajiro</b>
+                        <br><d>Faible hausse de la DÉF. en cas de danger</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="184.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Komajiro S</b>
+                        <br><d>Hausse de la DÉF. en cas de danger</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="451.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Komak</b>
+                        <br><d>Faible hausse de la vitesse d'installation de pièges</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="180.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Komaous</b>
+                        <br><d>Faible hausse de toutes les stats en cas de danger</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="179.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Komasan</b>
+                        <br><d>Faible hausse de toutes les stats en cas de danger</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="407.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Komasan B</b>
+                        <br><d>Augmente légèrement puissance att. du bouton X</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="181.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Komasan S</b>
+                        <br><d>Toutes les stats renforcées en cas de danger</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="183.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Komistigri</b>
+                        <br><d>Faible hausse de la DÉF. en cas de danger</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="201.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Maître Nyada</b>
+                        <br><d>Effet d'envoûtement positif plus durable sur le groupe</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="158.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Maranyan</b>
+                        <br><d>Chargement de la jauge d'âme plus rapide</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="143.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Margoth</b>
+                        <br><d>Chargement de la jauge d'att. un peu plus rapide</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="160.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Melonyan</b>
+                        <br><d>Chargement de la jauge d'âme plus rapide</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="155.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Oranyan</b>
+                        <br><d>Chargement de la jauge d'âme plus rapide</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="174.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Panja-san</b>
+                        <br><d>Augmente légèrement les dégâts sur les non-boss</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="159.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Pastényan</b>
+                        <br><d>Chargement de la jauge d'âme plus rapide</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="173.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Petit panja</b>
+                        <br><d>Augmente légèrement les dégâts sur les non-boss</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="192.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Pitou</b>
+                        <br><d>Effet d'envoût. positif un peu plus durable sur groupe</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="178.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Robocap</b>
+                        <br><d>Hausse des stats quand jauge d'âme pleine</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="185.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Robokoma</b>
+                        <br><d>Hausse des stats quand jauge d'âme pleine</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="172.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Rouminet</b>
+                        <br><d>Hausse de l'attaque temp. après défaite de l'ennemi</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="163.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Rubinyan</b>
+                        <br><d>Faible hausse de DÉF. lors du chargement d'attaque</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="190.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Sabruine</b>
+                        <br><d>PV restaurés régulièrement lors du chargement de l'att.</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="169.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Sailornyan</b>
+                        <br><d>Guérit des PV suppl. sur un Yo-Kai en cas de danger</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="161.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Saphinyan</b>
+                        <br><d>Faible hausse de DÉF. lors du chargement d'attaque</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="194.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Satandre</b>
+                        <br><d>Effet d'envoût. positif un peu plus durable sur groupe</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="142.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Squarlett</b>
+                        <br><d>Chargement de la jauge d'att. un peu plus rapide</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="144.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Squelèbelle</b>
+                        <br><d>Chargement de la jauge d'att. un peu plus rapide</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="189.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Tapur</b>
+                        <br><d>Réanime les alliés un peu plus vite</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="195.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Timours</b>
+                        <br><d>Réanime les alliés un peu plus vite</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="164.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Topanyan</b>
+                        <br><d>Faible hausse de DÉF. lors du chargement d'attaque</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="151.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Traviolette</b>
+                        <br><d>Attire un peu plus l'attention des ennemis</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="157.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Vigninyan</b>
+                        <br><d>Chargement de la jauge d'âme plus rapide</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="191.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Vito</b>
+                        <br><d>Faible hausse de la VIT.</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="3" data-id="152.0">
+                    <img src="../../../../images/ame-mignon.webp" alt="Image Mignons">
+                    <div class="text"><p>
+                        <b>Âme Yokœil</b>
+                        <br><d>Un peu plus de chance de lancer des coups critiques</d></p>
+                    </div>
+                </div>
+                <!-- Ajoutez d'autres divs ici -->
+            </div>
+        </div>
+    </header>
+</body>
+</html>
+  

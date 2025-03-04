@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Âmes de Vaillants - Yo-kai Watch Blasters - Yo-kai Galaxy</title>
+    <link rel="icon" type="image/png" href="../../../../images/icon.png" />
+    <link href="../style-page.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="../../../../">Accueil</a>
+            </div>
+            <div class="onglets">
+                <a href="../../../../#offres">Présentation</a>
+                <a href="../../../">Jeux</a>
+                <a href="../../../../qr-codes">Qr Codes</a>
+                <a href="../../../../quiz">Quiz</a>
+            </div>
+        </nav>
+
+        <div class="principal">
+            <h1>Âmes de Vaillants, Yo-Kai Watch Blasters</h1>
+            <div class="dropdown-class">
+                <div class="dropdown">
+                    <button onclick="toggleDropdown('dropdown1')">Trier par nom</button>
+                    <div class="dropdown-content" id="dropdown1">
+                        <button id="sortByNameAsc">De A-Z</button>
+                        <button id="sortByNameDesc">De Z-A</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button onclick="toggleDropdown('dropdown2')">Trier par stat</button>
+                    <div class="dropdown-content" id="dropdown2">
+                        <button id="sortByDescriptionAsc">De A-Z</button>
+                        <button id="sortByDescriptionDesc">De Z-A</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button onclick="toggleDropdown('dropdown3')">Trier par tribu</button>
+                    <div class="dropdown-content" id="dropdown3">
+                        <button id="sortByTribu">Trier par tribu</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button onclick="toggleDropdown('dropdown4')">Trier par ID</button>
+                    <div class="dropdown-content" id="dropdown4">
+                        <button id="sortByIdAsc">Croissant</button>
+                        <button id="sortByIdDesc">Décroissant</button>
+                    </div>
+                </div>
+            </div>
+            
+            <input type="text" id="searchBar" placeholder="Rechercher par nom...">
+            <script src="../script.js"></script>
+            <script src="../script2.js"></script>
+            
+            <div class="container">
+                <!-- Les ID des Tribus
+                Vaillants : 0
+                Mystérieux : 1
+                Costauds : 2
+                Mignons : 3
+                Bienveillants : 4
+                Sombres : 5
+                Sinistres : 6
+                Insaisissables : 7
+                Perfides : 8
+                Enma : 9
+                Wandroïdes : 10
+                Boss : 11
+                Aucune : 12
+                -->
+                <div class="item" data-tribu="0" data-id="1.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Woko</b>
+                        <br><d>Un peu plus de chance de lancer des coups critiques</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="2.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Pagno</b>
+                        <br><d>Un peu plus de chance de lancer des coups critiques</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="3.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Alfoncéo</b>
+                        <br><d>Plus de chance d'infliger des coups critiques</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="4.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Toumou</b>
+                        <br><d>Renvoie partiellem. légers dégâts quand attaqué</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="5.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Lamlam'mou</b>
+                        <br><d>Renvoie partiellem. légers dégâts quand attaqué</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="6.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Samoumouraï</b>
+                        <br><d>Renvoie partiellem. légers dégâts quand attaqué</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="7.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Samoussrai</b>
+                        <br><d>Hausse FOR. temp. pour les alliés guéris</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="8.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Ronimpec</b>
+                        <br><d>Début de mission avec jauge d'âme pleine</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="9.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Roupilion</b>
+                        <br><d>Faible hausse FOR. temp. pour les alliés guéris</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="10.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Rugis</b>
+                        <br><d>Accélère légèrement VIT. de chargement d'attaques</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="11.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Trépigno</b>
+                        <br><d>Effet d'envoûtement positif un peu plus durable sur soi</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="12.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Zerberker</b>
+                        <br><d>Augmente les dégâts sur les ennemis en danger</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="13.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Fouétar</b>
+                        <br><d>Hausse de l'attaque temp. après défaite de l'ennemi</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="14.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Sumochi</b>
+                        <br><d>Faible hausse DÉF. temp. pour les alliés guéris</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="15.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Mochimacho</b>
+                        <br><d>Faible hausse DÉF. temp. pour les alliés guéris</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="16.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Sale de bain</b>
+                        <br><d>Faible hausse de la VIT. lors du chargement d'attaque</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="17.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Bon-huii</b>
+                        <br><d>Guérit un peu plus tes PV</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="18.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Verrascible</b>
+                        <br><d>Guérit plus de tes PV</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="19.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Samuren</b>
+                        <br><d>Faible hausse de l'attaque quand les PV sont au max</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="20.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Barrakéda</b>
+                        <br><d>Faible hausse de l'attaque quand les PV sont au max</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="21.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Agonigiri</b>
+                        <br><d>Augmente les dégâts sur ennemis de type oni</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="22.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Onigirix</b>
+                        <br><d>Augmente les dégâts sur ennemis de type oni</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="23.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Heaumer</b>
+                        <br><d>Faible hausse jauge d'âme quand att. ennemie gardée</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="24.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Bushidos</b>
+                        <br><d>Hausse jauge d'âme quand att. ennemie gardée</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="25.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Âmiral</b>
+                        <br><d>Hausse jauge d'âme quand att. ennemie gardée</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="26.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Bouh</b>
+                        <br><d>Faible hausse de la DÉF. quand les PV sont au max</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="27.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Coach Antonic</b>
+                        <br><d>Hausse FOR. temp. pour les alliés guéris</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="28.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Feulion</b>
+                        <br><d>Faible hausse de la vitesse d'installation de pièges</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="29.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Vibrilion</b>
+                        <br><d>Réduit légèrement les dégâts de la terre</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="30.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Siro</b>
+                        <br><d>Augm. légèrement dégâts sur ennemis en danger</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="31.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Bonneto</b>
+                        <br><d>Un peu plus de chance de lancer des coups critiques</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="32.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Sabri</b>
+                        <br><d>Plus de chance d'infliger des coups critiques</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="33.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Padelou</b>
+                        <br><d>Absorbe une partie des PV en attaquant</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="34.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Orox</b>
+                        <br><d>Hausse de la VIT. lors du chargement de l'attaque</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="35.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Benkei</b>
+                        <br><d>Faible hausse ATT. temp. après défaite de l'ennemi</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="36.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme B3-NK1</b>
+                        <br><d>Faible hausse ATT. temp. après défaite de l'ennemi</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="37.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Ultramax N</b>
+                        <br><d>Forte hausse de la VIT.</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="38.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Ultramax K</b>
+                        <br><d>Forte hausse de la VIT.</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="39.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Hovernyan</b>
+                        <br><d>Plus de chance d'infliger des coups critiques</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="40.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Maskonyan</b>
+                        <br><d>Attire l'attention des ennemis</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="41.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Sushiyama</b>
+                        <br><d>Augmente légèrement puissance att. du bouton X</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="42.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Kapunki</b>
+                        <br><d>Quand PV à 0, ils seront parfois restaurés à 1 PV</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="43.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Scatcheur</b>
+                        <br><d>Faible hausse de l'attaque en cas de danger</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="44.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Scarmouche</b>
+                        <br><d>Hausse d'attaque en cas de danger</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="45.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Scarnage</b>
+                        <br><d>Hausse d'attaque en cas de danger</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="46.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Démophage</b>
+                        <br><d>PV restaurés en cas de défaite ennemie</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="47.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Vampéric</b>
+                        <br><d>PV restaurés en cas de défaite ennemie</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="48.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Luminoct</b>
+                        <br><d>Tes PV sont restaurés régulièrement</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="383.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Shogunyan</b>
+                        <br><d>Forte hausse de la VIT.</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="408.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Sire Nyancelot</b>
+                        <br><d>Attire l'attention des ennemis</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="410.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Momonyan</b>
+                        <br><d>Hausse ATT. temp. lors de collecte d'objects/orbes oni</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="444.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Bison Antonic</b>
+                        <br><d>Effet d'envoûtement positif plus durable sur le groupe</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="0" data-id="445.0">
+                    <img src="../../../../images/ame-vaillante.webp" alt="Image Vaillants">
+                    <div class="text"><p>
+                        <b>Âme Suprarachnus</b>
+                        <br><d>Hausse d'attaque en cas de danger</d></p>
+                    </div>
+                </div>
+                
+                <!-- Ajoutez d'autres divs ici -->
+            </div>
+        </div>
+    </header>
+</body>
+</html>
+  

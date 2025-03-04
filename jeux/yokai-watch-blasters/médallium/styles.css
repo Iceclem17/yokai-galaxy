@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.book {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    user-select: none; /* Empêche la sélection */
+    pointer-events:none; /* Empêche les interactions */
+}
+
+.book-image {
+    width: 100%;
+    height: auto;
+    user-select: none; /* Empêche la sélection */
+    pointer-events: none; /* Empêche les interactions */
+}
+
+.pin {
+    position: absolute;
+    width: 11%; /* Taille relative à l'image du livre */
+    height: auto;
+    transition: transform 0.3s;
+    user-select: none; /* Empêche la sélection */
+    pointer-events:auto; /* Empêche les interactions */
+}
+
+.pin:hover {
+    transform: scale(1.2);
+}
+
+#pin-info {
+    margin-top: 20px;
+    text-align: center;
+}

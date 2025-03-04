@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Âmes élémentaires - Yo-kai Watch Blasters - Yo-kai Galaxy</title>
+    <link rel="icon" type="image/png" href="../../../../images/icon.png" />
+    <link href="../style-page.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="../../../../">Accueil</a>
+            </div>
+            <div class="onglets">
+                <a href="../../../../#offres">Présentation</a>
+                <a href="../../../">Jeux</a>
+                <a href="../../../../qr-codes">Qr Codes</a>
+                <a href="../../../../quiz">Quiz</a>
+            </div>
+        </nav>
+
+        <div class="principal">
+            <h1>Âmes élémentaires, Yo-Kai Watch Blasters</h1>
+            <div class="dropdown-class">
+                <div class="dropdown">
+                    <button onclick="toggleDropdown('dropdown1')">Trier par nom</button>
+                    <div class="dropdown-content" id="dropdown1">
+                        <button id="sortByNameAsc">De A-Z</button>
+                        <button id="sortByNameDesc">De Z-A</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button onclick="toggleDropdown('dropdown2')">Trier par stat</button>
+                    <div class="dropdown-content" id="dropdown2">
+                        <button id="sortByDescriptionAsc">De A-Z</button>
+                        <button id="sortByDescriptionDesc">De Z-A</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button onclick="toggleDropdown('dropdown3')">Trier par tribu</button>
+                    <div class="dropdown-content" id="dropdown3">
+                        <button id="sortByTribu">Trier par tribu</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button onclick="toggleDropdown('dropdown4')">Trier par ID</button>
+                    <div class="dropdown-content" id="dropdown4">
+                        <button id="sortByIdAsc">Croissant</button>
+                        <button id="sortByIdDesc">Décroissant</button>
+                    </div>
+                </div>
+            </div>
+            
+            <input type="text" id="searchBar" placeholder="Rechercher par nom...">
+            <script src="../script.js"></script>
+            <script src="../script2.js"></script>
+            
+            <div class="container">
+                <!-- Les ID des Tribus
+                Vaillants : 0
+                Mystérieux : 1
+                Costauds : 2
+                Mignons : 3
+                Bienveillants : 4
+                Sombres : 5
+                Sinistres : 6
+                Insaisissables : 7
+                Perfides : 8
+                Enma : 9
+                Wandroïdes : 10
+                Boss : 11
+                Aucune : 12
+                -->
+                <div class="item" data-tribu="12" data-id="1008.0">
+                    <img src="../../../../images/ame-elementaire.webp" alt="Image Aucune">
+                    <div class="text"><p>
+                        <b>Âme intense</b>
+                        <br><d>Ajoute du feu aux physique attaques
+                        <br>Obtenable en fusionnant âme Feulion et âme Cho-cho</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="12" data-id="1009.0">
+                    <img src="../../../../images/ame-elementaire.webp" alt="Image Aucune">
+                    <div class="text"><p>
+                        <b>Âme trempée</b>
+                        <br><d>Ajoute de l'eau aux physique attaques
+                        <br>Obtenable en fusionnant âme Appak et âme Délujien</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="12" data-id="1010.0">
+                    <img src="../../../../images/ame-elementaire.webp" alt="Image Aucune">
+                    <div class="text"><p>
+                        <b>Âme tempête</b>
+                        <br><d>Ajoute de la foudre aux physique attaques
+                        <br>Obtenable en fusionnant âme Parantonn et âme Émettor</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="12" data-id="1011.0">
+                    <img src="../../../../images/ame-elementaire.webp" alt="Image Aucune">
+                    <div class="text"><p>
+                        <b>Âme bourgeon</b>
+                        <br><d>Ajoute de la terre aux physique attaques
+                        <br>Obtenable en fusionnant âme Vibrilion et âme Sire Dragon</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="12" data-id="1012.0">
+                    <img src="../../../../images/ame-elementaire.webp" alt="Image Aucune">
+                    <div class="text"><p>
+                        <b>Âme de neige</b>
+                        <br><d>Ajoute de la glace aux physique attaques
+                        <br>Obtenable en fusionnant âme Froahuahua et âme Blizzaria</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="12" data-id="1013.0">
+                    <img src="../../../../images/ame-elementaire.webp" alt="Image Aucune">
+                    <div class="text"><p>
+                        <b>Âme de rafale</b>
+                        <br><d>Ajoute du vent physique attaques
+                        <br>Obtenable en fusionnant âme Matchou et âme Volatriste</d></p>
+                    </div>
+                </div>
+                <!-- Ajoutez d'autres divs ici -->
+            </div>
+        </div>
+    </header>
+</body>
+</html>
+  

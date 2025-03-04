@@ -1,0 +1,176 @@
+html{
+    scroll-behavior:smooth;
+  }
+  
+  body{
+    margin: 0;
+    padding:0;
+    font-family: Arial, sans-serif;
+    background-color: #bababa;
+  }
+  
+  header{
+    height:100vh;
+    background: url('images/image-bg.jpg');
+    background-position: center;
+    color: #fff;
+    text-align:center;
+  }
+  
+  header nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    padding:20px;
+    color:#000;
+    background-color: #333333;
+  }
+  
+  header nav a{
+    color:#bababa;
+    text-decoration:none;
+    margin-right:10px;
+  }
+  
+  
+  header nav a:hover {
+    color:#fff;
+    border-bottom: #919191 solid 1px;
+  }
+
+  header .principal{
+    margin-top: 50px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    color: #000;
+  }
+
+  header .principal h4{
+    align-items: center;
+  }
+
+  .principal {
+    padding: 15px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.principal .titre {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.principal .titre img {
+  width: 4vw;
+  margin: auto;
+  margin-left: 5px;
+}
+  
+.principal .pieces img {
+  width: 10vw;
+  height: auto;
+}
+
+
+.principal .pieces {
+  display: block;
+  flex-wrap: wrap;
+  margin: auto;
+
+}
+
+
+@media screen and (max-width: 1100px) and (min-width: 750px) {
+  .principal .pieces img {
+    width: 10vw;
+  }
+  .principal .titre img {
+    width: 5vw;
+  }
+}
+
+@media screen and (max-width: 750px) and (min-width: 533px) {
+  .principal .pieces img {
+    width: 10vw;
+  }
+  .principal .titre img {
+    width: 10vw;
+  }
+  p {
+    font-size: 3vw;
+  }
+  a {
+    font-size: 3vw;
+  }
+}
+@media screen and (max-width: 533px) and (min-width: 376px) {
+  .principal .pieces img {
+    width: 14vw;
+  }
+  .principal .titre img {
+    width: 8vw;
+  }
+  p {
+    font-size: 3vw;
+  }
+  a {
+    font-size: 3vw;
+  }
+  h1 {
+    font-size: 8vw;
+  }
+  header .principal {
+    padding: 5px;
+    margin: 5px;
+    margin-top: 10px;
+    border-radius: 4px;
+  }
+  .principal .item {
+    margin: 0px;
+    padding: 0px;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .principal .pieces img {
+    width: 16vw;
+  }
+  .principal .titre img {
+    width: 10vw;
+  }
+  p {
+    font-size: 3vw;
+  }
+  a {
+    font-size: 3vw;
+  }
+  h1 {
+    font-size: 8vw;
+  }
+  header .principal {
+    padding: 5px;
+    margin: 5px;
+    margin-top: 10px;
+    border-radius: 4px;
+  }
+  .principal .item {
+    margin: 0px;
+    padding: 0px;
+    border-radius: 10px;
+  }
+
+  
+}
+@media screen and (max-width: 533px) {
+  .principal .titre img {
+    margin:auto;
+  }
+  .principal .titre h1 {
+    margin-bottom:0px;
+  }
+}

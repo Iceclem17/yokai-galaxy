@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Âmes de Mystérieux - Yo-kai Watch Blasters - Yo-kai Galaxy</title>
+    <link rel="icon" type="image/png" href="../../../../images/icon.png" />
+    <link href="../style-page.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="../../../../">Accueil</a>
+            </div>
+            <div class="onglets">
+                <a href="../../../../#offres">Présentation</a>
+                <a href="../../../">Jeux</a>
+                <a href="../../../../qr-codes">Qr Codes</a>
+                <a href="../../../../quiz">Quiz</a>
+            </div>
+        </nav>
+
+        <div class="principal">
+            <h1>Âmes de Mystérieux, Yo-Kai Watch Blasters</h1>
+            <div class="dropdown-class">
+                <div class="dropdown">
+                    <button onclick="toggleDropdown('dropdown1')">Trier par nom</button>
+                    <div class="dropdown-content" id="dropdown1">
+                        <button id="sortByNameAsc">De A-Z</button>
+                        <button id="sortByNameDesc">De Z-A</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button onclick="toggleDropdown('dropdown2')">Trier par stat</button>
+                    <div class="dropdown-content" id="dropdown2">
+                        <button id="sortByDescriptionAsc">De A-Z</button>
+                        <button id="sortByDescriptionDesc">De Z-A</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button onclick="toggleDropdown('dropdown3')">Trier par tribu</button>
+                    <div class="dropdown-content" id="dropdown3">
+                        <button id="sortByTribu">Trier par tribu</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button onclick="toggleDropdown('dropdown4')">Trier par ID</button>
+                    <div class="dropdown-content" id="dropdown4">
+                        <button id="sortByIdAsc">Croissant</button>
+                        <button id="sortByIdDesc">Décroissant</button>
+                    </div>
+                </div>
+            </div>
+            
+            <input type="text" id="searchBar" placeholder="Rechercher par nom...">
+            <script src="../script.js"></script>
+            <script src="../script2.js"></script>
+            
+            <div class="container">
+                <!-- Les ID des Tribus
+                Vaillants : 0
+                Mystérieux : 1
+                Costauds : 2
+                Mignons : 3
+                Bienveillants : 4
+                Sombres : 5
+                Sinistres : 6
+                Insaisissables : 7
+                Perfides : 8
+                Enma : 9
+                Wandroïdes : 10
+                Boss : 11
+                Aucune : 12
+                -->
+                <div class="item" data-tribu="1" data-id="78.0">
+                    <img src="../../../../images/ame-mysterieuse.webp" alt="Image Mystérieux">
+                    <div class="text"><p>
+                        <b>Âme Apélicain</b>
+                        <br><d>Faible hausse de la VIT.</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="1" data-id="64.0">
+                    <img src="../../../../images/ame-mysterieuse.webp" alt="Image Mystérieux">
+                    <div class="text"><p>
+                        <b>Âme Babalance</b>
+                        <br><d>Tes PV sont restaurés graduellement</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="1" data-id="91.0">
+                    <img src="../../../../images/ame-mysterieuse.webp" alt="Image Mystérieux">
+                    <div class="text"><p>
+                        <b>Âme Barakabo</b>
+                        <br><d>Hausse ESP. temporaire pour les alliés guéris</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="1" data-id="55.0">
+                    <img src="../../../../images/ame-mysterieuse.webp" alt="Image Mystérieux">
+                    <div class="text"><p>
+                        <b>Âme Bastata</b>
+                        <br><d>Un peu de PV rest. lors de collecte d'objets/orbes oni</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="1" data-id="72.0">
+                    <img src="../../../../images/ame-mysterieuse.webp" alt="Image Mystérieux">
+                    <div class="text"><p>
+                        <b>Âme Brumella</b>
+                        <br><d>Chargement de la jauge d'âme un peu plus rapide</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="1" data-id="71.0">
+                    <img src="../../../../images/ame-mysterieuse.webp" alt="Image Mystérieux">
+                    <div class="text"><p>
+                        <b>Âme Brumette</b>
+                        <br><d>Faible hausse des stats quand jauge d'âme pleine</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="1" data-id="56.0">
+                    <img src="../../../../images/ame-mysterieuse.webp" alt="Image Mystérieux">
+                    <div class="text"><p>
+                        <b>Âme Chaipô</b>
+                        <br><d>Attire un peu plus l'attention des ennemis</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="1" data-id="92.0">
+                    <img src="../../../../images/ame-mysterieuse.webp" alt="Image Mystérieux">
+                    <div class="text"><p>
+                        <b>Âme Chymère</b>
+                        <br><d>Hausse VIT. temporaire pour les alliés guéris</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="1" data-id="93.0">
+                    <img src="../../../../images/ame-mysterieuse.webp" alt="Image Mystérieux">
+                    <div class="text"><p>
+                        <b>Âme Chyper</b>
+                        <br><d>Hausse VIT. temporaire pour les alliés guéris</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="1" data-id="66.0">
+                    <img src="../../../../images/ame-mysterieuse.webp" alt="Image Mystérieux">
+                    <div class="text"><p>
+                        <b>Âme Cupistol</b>
+                        <br><d>Réduit légèrement les dégâts du feu</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="1" data-id="67.0">
+                    <img src="../../../../images/ame-mysterieuse.webp" alt="Image Mystérieux">
+                    <div class="text"><p>
+                        <b>Âme Donjouant</b>
+                        <br><d>Réduit légèrement les dégâts du feu</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="1" data-id="75.0">
+                    <img src="../../../../images/ame-mysterieuse.webp" alt="Image Mystérieux">
+                    <div class="text"><p>
+                        <b>Âme Dynamo</b>
+                        <br><d>Hausse de la DÉF. lors du chargement de l'attaque</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="1" data-id="74.0">
+                    <img src="../../../../images/ame-mysterieuse.webp" alt="Image Mystérieux">
+                    <div class="text"><p>
+                        <b>Âme Émettor</b>
+                        <br><d>Réduit les dégâts de la foudre</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="1" data-id="85.0">
+                    <img src="../../../../images/ame-mysterieuse.webp" alt="Image Mystérieux">
+                    <div class="text"><p>
+                        <b>Âme Espi</b>
+                        <br><d>Effet d'envoûtement positif un peu plus durable sur soi</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="1" data-id="86.0">
+                    <img src="../../../../images/ame-mysterieuse.webp" alt="Image Mystérieux">
+                    <div class="text"><p>
+                        <b>Âme Étassivilia</b>
+                        <br><d>Effet d'envoûtement positif un peu plus durable sur soi</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="1" data-id="58.0">
+                    <img src="../../../../images/ame-mysterieuse.webp" alt="Image Mystérieux">
+                    <div class="text"><p>
+                        <b>Âme Gagalurin</b>
+                        <br><d>Faible hausse ESP. temp. pour les alliés guéris</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="1" data-id="50.0">
+                    <img src="../../../../images/ame-mysterieuse.webp" alt="Image Mystérieux">
+                    <div class="text"><p>
+                        <b>Âme Gastong</b>
+                        <br><d>Faible hausse VIT. temp. tour les alliés guéris</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="1" data-id="82.0">
+                    <img src="../../../../images/ame-mysterieuse.webp" alt="Image Mystérieux">
+                    <div class="text"><p>
+                        <b>Âme Hiblusion</b>
+                        <br><d>Faible hausse de la VIT.</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="1" data-id="84.0">
+                    <img src="../../../../images/ame-mysterieuse.webp" alt="Image Mystérieux">
+                    <div class="text"><p>
+                        <b>Âme Hibourling</b>
+                        <br><d>Faible hausse de la VIT. lors du chargement d'attaque</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="1" data-id="83.0">
+                    <img src="../../../../images/ame-mysterieuse.webp" alt="Image Mystérieux">
+                    <div class="text"><p>
+                        <b>Âme Hibrouille</b>
+                        <br><d>PV partiellement restaurés après réanimation</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="1" data-id="384.0">
+                    <img src="../../../../images/ame-mysterieuse.webp" alt="Image Mystérieux">
+                    <div class="text"><p>
+                        <b>Âme Komashura</b>
+                        <br><d>Réduit les dégâts du feu</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="1" data-id="90.0">
+                    <img src="../../../../images/ame-mysterieuse.webp" alt="Image Mystérieux">
+                    <div class="text"><p>
+                        <b>Âme Kyubi</b>
+                        <br><d>Hausse de l'attaque quand les PV sont au max</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="1" data-id="409.0">
+                    <img src="../../../../images/ame-mysterieuse.webp" alt="Image Mystérieux">
+                    <div class="text"><p>
+                        <b>Âme Maginyan</b>
+                        <br><d>Chargement de la jauge d'âme plus rapide</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="1" data-id="76.0">
+                    <img src="../../../../images/ame-mysterieuse.webp" alt="Image Mystérieux">
+                    <div class="text"><p>
+                        <b>Âme Maître Oden</b>
+                        <br><d>Les PV des alliés sont restaurés graduellement</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="1" data-id="61.0">
+                    <img src="../../../../images/ame-mysterieuse.webp" alt="Image Mystérieux">
+                    <div class="text"><p>
+                        <b>Âme Marra</b>
+                        <br><d>Faible hausse ESP. temp. pour les alliés guéris</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="1" data-id="52.0">
+                    <img src="../../../../images/ame-mysterieuse.webp" alt="Image Mystérieux">
+                    <div class="text"><p>
+                        <b>Âme Matchou</b>
+                        <br><d>Réduit légèrement les dégâts du vent</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="1" data-id="65.0">
+                    <img src="../../../../images/ame-mysterieuse.webp" alt="Image Mystérieux">
+                    <div class="text"><p>
+                        <b>Âme Mémétal</b>
+                        <br><d>Tes PV sont restaurés graduellement</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="1" data-id="57.0">
+                    <img src="../../../../images/ame-mysterieuse.webp" alt="Image Mystérieux">
+                    <div class="text"><p>
+                        <b>Âme Mémogre</b>
+                        <br><d>Attire un peu plus l'attention des ennemis</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="1" data-id="447.0">
+                    <img src="../../../../images/ame-mysterieuse.webp" alt="Image Mystérieux">
+                    <div class="text"><p>
+                        <b>Âme MoiYihin</b>
+                        <br><d>Les PV des alliés sont restaurés graduellement</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="1" data-id="51.0">
+                    <img src="../../../../images/ame-mysterieuse.webp" alt="Image Mystérieux">
+                    <div class="text"><p>
+                        <b>Âme Morvobec</b>
+                        <br><d>Tes effets d'envoût. négatif sont un peu plus durables</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="1" data-id="77.0">
+                    <img src="../../../../images/ame-mysterieuse.webp" alt="Image Mystérieux">
+                    <div class="text"><p>
+                        <b>Âme Mythovni</b>
+                        <br><d>Attire un peu plus l'attention des ennemis</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="1" data-id="60.0">
+                    <img src="../../../../images/ame-mysterieuse.webp" alt="Image Mystérieux">
+                    <div class="text"><p>
+                        <b>Âme Narinos</b>
+                        <br><d>Faible hausse des stats après réanimation</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="1" data-id="68.0">
+                    <img src="../../../../images/ame-mysterieuse.webp" alt="Image Mystérieux">
+                    <div class="text"><p>
+                        <b>Âme Nonjuan</b>
+                        <br><d>Attire un peu plus l'attention des ennemis</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="1" data-id="81.0">
+                    <img src="../../../../images/ame-mysterieuse.webp" alt="Image Mystérieux">
+                    <div class="text"><p>
+                        <b>Âme Nuiroir</b>
+                        <br><d>Renvoie partiellem. légers dégâts quand attaqué</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="1" data-id="59.0">
+                    <img src="../../../../images/ame-mysterieuse.webp" alt="Image Mystérieux">
+                    <div class="text"><p>
+                        <b>Âme Ovide</b>
+                        <br><d>Jauge d'attaque se charge un peu quand attaqué</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="1" data-id="73.0">
+                    <img src="../../../../images/ame-mysterieuse.webp" alt="Image Mystérieux">
+                    <div class="text"><p>
+                        <b>Âme Padrézo</b>
+                        <br><d>Réduit légèrement les dégâts de la foudre</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="1" data-id="53.0">
+                    <img src="../../../../images/ame-mysterieuse.webp" alt="Image Mystérieux">
+                    <div class="text"><p>
+                        <b>Âme Papa Ress</b>
+                        <br><d>Un peu de PV rest. lors de collecte d'objets/orbes oni</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="1" data-id="70.0">
+                    <img src="../../../../images/ame-mysterieuse.webp" alt="Image Mystérieux">
+                    <div class="text"><p>
+                        <b>Âme Pardomino</b>
+                        <br><d>PV restaurés peu à peu lors d'une garde</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="1" data-id="49.0">
+                    <img src="../../../../images/ame-mysterieuse.webp" alt="Image Mystérieux">
+                    <div class="text"><p>
+                        <b>Âme Pleurapluie</b>
+                        <br><d>PV partiellement restaurés après réanimation</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="1" data-id="446.0">
+                    <img src="../../../../images/ame-mysterieuse.webp" alt="Image Mystérieux">
+                    <div class="text"><p>
+                        <b>Âme Popcorne</b>
+                        <br><d>Hausse d'attaque en cas de danger</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="1" data-id="54.0">
+                    <img src="../../../../images/ame-mysterieuse.webp" alt="Image Mystérieux">
+                    <div class="text"><p>
+                        <b>Âme Ralbouc</b>
+                        <br><d>Un peu de PV rest. lors de collecte d'objets/orbes oni</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="1" data-id="79.0">
+                    <img src="../../../../images/ame-mysterieuse.webp" alt="Image Mystérieux">
+                    <div class="text"><p>
+                        <b>Âme Télémir</b>
+                        <br><d>Renvoie partiellem. légers dégâts quand attaqué</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="1" data-id="88.0">
+                    <img src="../../../../images/ame-mysterieuse.webp" alt="Image Mystérieux">
+                    <div class="text"><p>
+                        <b>Âme Tengu</b>
+                        <br><d>Hausse de la VIT. lors du chargement de l'attaque</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="1" data-id="89.0">
+                    <img src="../../../../images/ame-mysterieuse.webp" alt="Image Mystérieux">
+                    <div class="text"><p>
+                        <b>Âme Tengurou</b>
+                        <br><d>Hausse de la VIT. lors du chargement de l'attaque</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="1" data-id="63.0">
+                    <img src="../../../../images/ame-mysterieuse.webp" alt="Image Mystérieux">
+                    <div class="text"><p>
+                        <b>Âme Toutouïe</b>
+                        <br><d>Tes PV sont restaurés graduellement</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="1" data-id="80.0">
+                    <img src="../../../../images/ame-mysterieuse.webp" alt="Image Mystérieux">
+                    <div class="text"><p>
+                        <b>Âme Triptic-tac</b>
+                        <br><d>Renvoie partiellem. légers dégâts quand attaqué</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="1" data-id="69.0">
+                    <img src="../../../../images/ame-mysterieuse.webp" alt="Image Mystérieux">
+                    <div class="text"><p>
+                        <b>Âme Trodésolé</b>
+                        <br><d>PV restaurés peu à peu lors d'une garde</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="1" data-id="87.0">
+                    <img src="../../../../images/ame-mysterieuse.webp" alt="Image Mystérieux">
+                    <div class="text"><p>
+                        <b>Âme Valentino</b>
+                        <br><d>Les PV des alliés sont restaurés graduellement</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="1" data-id="62.0">
+                    <img src="../../../../images/ame-mysterieuse.webp" alt="Image Mystérieux">
+                    <div class="text"><p>
+                        <b>Âme Violette</b>
+                        <br><d>Un peu de PV rest. lors de collecte d'objets/orbes oni</d></p>
+                    </div>
+                </div>
+                
+                <!-- Ajoutez d'autres divs ici -->
+            </div>
+        </div>
+    </header>
+</body>
+</html>
+  

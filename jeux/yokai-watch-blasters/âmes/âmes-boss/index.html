@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Âmes de Boss - Yo-kai Watch Blasters - Yo-kai Galaxy</title>
+    <link rel="icon" type="image/png" href="../../../../images/icon.png" />
+    <link href="../style-page.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="../../../../">Accueil</a>
+            </div>
+            <div class="onglets">
+                <a href="../../../../#offres">Présentation</a>
+                <a href="../../../">Jeux</a>
+                <a href="../../../../qr-codes">Qr Codes</a>
+                <a href="../../../../quiz">Quiz</a>
+            </div>
+        </nav>
+
+        <div class="principal">
+            <h1>Âmes de Boss, Yo-Kai Watch Blasters</h1>
+            <div class="dropdown-class">
+                <div class="dropdown">
+                    <button onclick="toggleDropdown('dropdown1')">Trier par nom</button>
+                    <div class="dropdown-content" id="dropdown1">
+                        <button id="sortByNameAsc">De A-Z</button>
+                        <button id="sortByNameDesc">De Z-A</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button onclick="toggleDropdown('dropdown2')">Trier par stat</button>
+                    <div class="dropdown-content" id="dropdown2">
+                        <button id="sortByDescriptionAsc">De A-Z</button>
+                        <button id="sortByDescriptionDesc">De Z-A</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button onclick="toggleDropdown('dropdown3')">Trier par tribu</button>
+                    <div class="dropdown-content" id="dropdown3">
+                        <button id="sortByTribu">Trier par tribu</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button onclick="toggleDropdown('dropdown4')">Trier par ID</button>
+                    <div class="dropdown-content" id="dropdown4">
+                        <button id="sortByIdAsc">Croissant</button>
+                        <button id="sortByIdDesc">Décroissant</button>
+                    </div>
+                </div>
+            </div>
+            
+            <input type="text" id="searchBar" placeholder="Rechercher par nom...">
+            <script src="../script.js"></script>
+            <script src="../script2.js"></script>
+            
+            <div class="container">
+                <!-- Les ID des Tribus
+                Vaillants : 0
+                Mystérieux : 1
+                Costauds : 2
+                Mignons : 3
+                Bienveillants : 4
+                Sombres : 5
+                Sinistres : 6
+                Insaisissables : 7
+                Perfides : 8
+                Enma : 9
+                Wandroïdes : 10
+                Boss : 11
+                Aucune : 12
+                -->
+                <div class="item" data-tribu="11" data-id="461.0">
+                    <img src="../../../../images/boss-soul.webp" alt="Image Boss">
+                    <div class="text"><p>
+                        <b>Âme 3000</b>
+                        <br><d>Hausse des stats quand les ennemis te ciblent</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="11" data-id="417.0">
+                    <img src="../../../../images/boss-soul.webp" alt="Image Boss">
+                    <div class="text"><p>
+                        <b>Âme Blingos</b>
+                        <br><d>Invisibilité temporaire en cas de danger</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="11" data-id="418.0">
+                    <img src="../../../../images/boss-soul.webp" alt="Image Boss">
+                    <div class="text"><p>
+                        <b>Âme Bogos</b>
+                        <br><d>Baisse de la DÉF. ennemie en attaquant (cumulable)</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="11" data-id="419.0">
+                    <img src="../../../../images/boss-soul.webp" alt="Image Boss">
+                    <div class="text"><p>
+                        <b>Âme Carpitaine</b>
+                        <br><d>Hausse de la VIT. pour tous les alliés</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="11" data-id="433.0">
+                    <img src="../../../../images/boss-soul.webp" alt="Image Boss">
+                    <div class="text"><p>
+                        <b>Âme Chantiwhisp</b>
+                        <br><d>Ralentit la perte de la jauge d'attaque</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="11" data-id="414.0">
+                    <img src="../../../../images/boss-soul.webp" alt="Image Boss">
+                    <div class="text"><p>
+                        <b>Âme Crocho</b>
+                        <br><d>Les ennemis feront tomber des objets plus souvent</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="11" data-id="426.0">
+                    <img src="../../../../images/boss-soul.webp" alt="Image Boss">
+                    <div class="text"><p>
+                        <b>Âme Démophage</b>
+                        <br><d>Augmente les effets de la garde</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="11" data-id="468.0">
+                    <img src="../../../../images/boss-soul.webp" alt="Image Boss">
+                    <div class="text"><p>
+                        <b>Âme Domni. 2</b>
+                        <br><d>Les pièges installés ne toucheront pas tes alliés</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="11" data-id="441.0">
+                    <img src="../../../../images/boss-soul.webp" alt="Image Boss">
+                    <div class="text"><p>
+                        <b>Âme Domniscian</b>
+                        <br><d>Augmente la puissance des attaques du bouton X</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="11" data-id="438.0">
+                    <img src="../../../../images/boss-soul.webp" alt="Image Boss">
+                    <div class="text"><p>
+                        <b>Âme Extrabuki</b>
+                        <br><d>Hausse des stats 3 minutes après le début de mission</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="11" data-id="440.0">
+                    <img src="../../../../images/boss-soul.webp" alt="Image Boss">
+                    <div class="text"><p>
+                        <b>Âme Filomène</b>
+                        <br><d>Jauge d'attaque se charge quand attaqué</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="11" data-id="423.0">
+                    <img src="../../../../images/boss-soul.webp" alt="Image Boss">
+                    <div class="text"><p>
+                        <b>Âme Gargaros</b>
+                        <br><d>Évasion évitera les att. ennemies plus facilement</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="11" data-id="466.0">
+                    <img src="../../../../images/boss-soul.webp" alt="Image Boss">
+                    <div class="text"><p>
+                        <b>Âme Griffes Dorées</b>
+                        <br><d>Utilisation ilimitée des att. avec le bouton A</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="11" data-id="416.0">
+                    <img src="../../../../images/boss-soul.webp" alt="Image Boss">
+                    <div class="text"><p>
+                        <b>Âme Grolos</b>
+                        <br><d>PV restaurés régulièrement lors du chargement de l'att.</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="11" data-id="422.0">
+                    <img src="../../../../images/boss-soul.webp" alt="Image Boss">
+                    <div class="text"><p>
+                        <b>Âme Hydreux</b>
+                        <br><d>Hausse de toutes les stats en cas d'absence d'allié</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="11" data-id="429.0">
+                    <img src="../../../../images/boss-soul.webp" alt="Image Boss">
+                    <div class="text"><p>
+                        <b>Âme Jiganyan</b>
+                        <br><d>Hausse de puissance des Âmultimes</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="11" data-id="430.0">
+                    <img src="../../../../images/boss-soul.webp" alt="Image Boss">
+                    <div class="text"><p>
+                        <b>Âme Komak</b>
+                        <br><d>Hausse de l'ATT. en attaquant (cumulable)</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="11" data-id="434.0">
+                    <img src="../../../../images/boss-soul.webp" alt="Image Boss">
+                    <div class="text"><p>
+                        <b>Âme Lady Perpétua</b>
+                        <br><d>Effet d'envoûtement négatif plus durable sur tous</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="11" data-id="432.0">
+                    <img src="../../../../images/boss-soul.webp" alt="Image Boss">
+                    <div class="text"><p>
+                        <b>Âme Marmonneur</b>
+                        <br><d>Hausse de la vitesse d'installation de pièges</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="11" data-id="436.0">
+                    <img src="../../../../images/boss-soul.webp" alt="Image Boss">
+                    <div class="text"><p>
+                        <b>Âme McKraken</b>
+                        <br><d>Hausse de la VIT. en attaquant (cumulable)</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="11" data-id="424.0">
+                    <img src="../../../../images/boss-soul.webp" alt="Image Boss">
+                    <div class="text"><p>
+                        <b>Âme Ogralos</b>
+                        <br><d>L'ESP. augmente avec une hausse de la FOR.</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="11" data-id="443.0">
+                    <img src="../../../../images/boss-soul.webp" alt="Image Boss">
+                    <div class="text"><p>
+                        <b>Âme Omai Tourb.</b>
+                        <br><d>Baisse de l'ATT. ennemie en attaquant (cumulable)</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="11" data-id="467.0">
+                    <img src="../../../../images/boss-soul.webp" alt="Image Boss">
+                    <div class="text"><p>
+                        <b>Âme Or Tourb.</b>
+                        <br><d>Esquive parfois les attaques ennemies</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="11" data-id="425.0">
+                    <img src="../../../../images/boss-soul.webp" alt="Image Boss">
+                    <div class="text"><p>
+                        <b>Âme Orquanos</b>
+                        <br><d>L'ATT. augmente avec une hausse de la  DÉF.</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="11" data-id="442.0">
+                    <img src="../../../../images/boss-soul.webp" alt="Image Boss">
+                    <div class="text"><p>
+                        <b>Âme Pattes Rouges</b>
+                        <br><d>Baisse de l'ATT. ennemie en attaquant (cumulable)</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="11" data-id="415.0">
+                    <img src="../../../../images/boss-soul.webp" alt="Image Boss">
+                    <div class="text"><p>
+                        <b>Âme Porcinator</b>
+                        <br><d>Plus de chance de devenir ami</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="11" data-id="431.0">
+                    <img src="../../../../images/boss-soul.webp" alt="Image Boss">
+                    <div class="text"><p>
+                        <b>Âme Potofeu</b>
+                        <br><d>Agrandit la zone d'effet des attaques</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="11" data-id="439.0">
+                    <img src="../../../../images/boss-soul.webp" alt="Image Boss">
+                    <div class="text"><p>
+                        <b>Âme Robonyan 28</b>
+                        <br><d>Accélère la vitesse de chargement des attaques</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="11" data-id="469.0">
+                    <img src="../../../../images/boss-soul.webp" alt="Image Boss">
+                    <div class="text"><p>
+                        <b>Âme Roi Shogun</b>
+                        <br><d>N'attaque pas pendant 15s. Prochain coup sera critique</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="11" data-id="420.0">
+                    <img src="../../../../images/boss-soul.webp" alt="Image Boss">
+                    <div class="text"><p>
+                        <b>Âme Styx VI</b>
+                        <br><d>L'ATT. augmente avec les PV restants</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="11" data-id="428.0">
+                    <img src="../../../../images/boss-soul.webp" alt="Image Boss">
+                    <div class="text"><p>
+                        <b>Âme Tata la Terreur</b>
+                        <br><d>Les PV des alliés sont restaurés régulièrement</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="11" data-id="459.0">
+                    <img src="../../../../images/boss-soul.webp" alt="Image Boss">
+                    <div class="text"><p>
+                        <b>Âme Tonnerre</b>
+                        <br><d>Plus de chance d'infliger des c. critiques à distance</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="11" data-id="421.0">
+                    <img src="../../../../images/boss-soul.webp" alt="Image Boss">
+                    <div class="text"><p>
+                        <b>Âme Triptyk</b>
+                        <br><d>La FOR. augmente avec une hausse de l'ESP.</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="11" data-id="427.0">
+                    <img src="../../../../images/boss-soul.webp" alt="Image Boss">
+                    <div class="text"><p>
+                        <b>Âme Vampéric</b>
+                        <br><d>Ralentit jauge d'ascencion pour tous les alliés</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="11" data-id="464.0">
+                    <img src="../../../../images/boss-soul.webp" alt="Image Boss">
+                    <div class="text"><p>
+                        <b>Âme Zazel</b>
+                        <br><d>Hausse massive de l'ATT. quand tes PV sont à 1</d></p>
+                    </div>
+                </div>
+                <!-- Ajoutez d'autres divs ici -->
+            </div>
+        </div>
+    </header>
+</body>
+</html>
+  

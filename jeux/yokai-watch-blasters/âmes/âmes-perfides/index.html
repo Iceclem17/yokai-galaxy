@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Âmes de Perfides - Yo-kai Watch Blasters - Yo-kai Galaxy</title>
+    <link rel="icon" type="image/png" href="../../../../images/icon.png" />
+    <link href="../style-page.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="../../../../">Accueil</a>
+            </div>
+            <div class="onglets">
+                <a href="../../../../#offres">Présentation</a>
+                <a href="../../../">Jeux</a>
+                <a href="../../../../qr-codes">Qr Codes</a>
+                <a href="../../../../quiz">Quiz</a>
+            </div>
+        </nav>
+
+        <div class="principal">
+            <h1>Âmes Perfides, Yo-Kai Watch Blasters</h1>
+            <div class="dropdown-class">
+                <div class="dropdown">
+                    <button onclick="toggleDropdown('dropdown1')">Trier par nom</button>
+                    <div class="dropdown-content" id="dropdown1">
+                        <button id="sortByNameAsc">De A-Z</button>
+                        <button id="sortByNameDesc">De Z-A</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button onclick="toggleDropdown('dropdown2')">Trier par stat</button>
+                    <div class="dropdown-content" id="dropdown2">
+                        <button id="sortByDescriptionAsc">De A-Z</button>
+                        <button id="sortByDescriptionDesc">De Z-A</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button onclick="toggleDropdown('dropdown3')">Trier par tribu</button>
+                    <div class="dropdown-content" id="dropdown3">
+                        <button id="sortByTribu">Trier par tribu</button>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button onclick="toggleDropdown('dropdown4')">Trier par ID</button>
+                    <div class="dropdown-content" id="dropdown4">
+                        <button id="sortByIdAsc">Croissant</button>
+                        <button id="sortByIdDesc">Décroissant</button>
+                    </div>
+                </div>
+            </div>
+            
+            <input type="text" id="searchBar" placeholder="Rechercher par nom...">
+            <script src="../script.js"></script>
+            <script src="../script2.js"></script>
+            
+            <div class="container">
+                <!-- Les ID des Tribus
+                Vaillants : 0
+                Mystérieux : 1
+                Costauds : 2
+                Mignons : 3
+                Bienveillants : 4
+                Sombres : 5
+                Sinistres : 6
+                Insaisissables : 7
+                Perfides : 8
+                Enma : 9
+                Wandroïdes : 10
+                Boss : 11
+                Aucune : 12
+                -->
+                <div class="item" data-tribu="8" data-id="403.0">
+                    <img src="../../../../images/ame-perfide.webp" alt="Image Perfides">
+                    <div class="text"><p>
+                        <b>Âme Cyrustre</b>
+                        <br><d>Hausse de puissance des coups critiques</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="8" data-id="396.0">
+                    <img src="../../../../images/ame-perfide.webp" alt="Image Perfides">
+                    <div class="text"><p>
+                        <b>Âme Fatalutin</b>
+                        <br><d>Tes PV sont restaurés graduellement</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="8" data-id="402.0">
+                    <img src="../../../../images/ame-perfide.webp" alt="Image Perfides">
+                    <div class="text"><p>
+                        <b>Âme Fielippine</b>
+                        <br><d>Effet d'envoûtement positif plus durable sur le groupe</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="8" data-id="394.0">
+                    <img src="../../../../images/ame-perfide.webp" alt="Image Perfides">
+                    <div class="text"><p>
+                        <b>Âme Fou Kappa</b>
+                        <br><d>PV restaurés peu à peu lors du chargement de l'att.</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="8" data-id="393.0">
+                    <img src="../../../../images/ame-perfide.webp" alt="Image Perfides">
+                    <div class="text"><p>
+                        <b>Âme Fumella</b>
+                        <br><d>Chargement de la jauge d'âme un peu plus rapide</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="8" data-id="391.0">
+                    <img src="../../../../images/ame-perfide.webp" alt="Image Perfides">
+                    <div class="text"><p>
+                        <b>Âme Gale de bain</b>
+                        <br><d>Faible hausse de la VIT. lors du chargement d'attaque</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="8" data-id="401.0">
+                    <img src="../../../../images/ame-perfide.webp" alt="Image Perfides">
+                    <div class="text"><p>
+                        <b>Âme Injustin</b>
+                        <br><d>Tes effets d'envoût. négatif sont plus durables</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="8" data-id="392.0">
+                    <img src="../../../../images/ame-perfide.webp" alt="Image Perfides">
+                    <div class="text"><p>
+                        <b>Âme Mabouhl</b>
+                        <br><d>Hausse de la DÉF. quand les PV sont au max</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="8" data-id="404.0">
+                    <img src="../../../../images/ame-perfide.webp" alt="Image Perfides">
+                    <div class="text"><p>
+                        <b>Âme Maudicko</b>
+                        <br><d>Augmente le nombre de PV absorbés</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="8" data-id="397.0">
+                    <img src="../../../../images/ame-perfide.webp" alt="Image Perfides">
+                    <div class="text"><p>
+                        <b>Âme Métaréaulog</b>
+                        <br><d>Faible hausse de la DÉF. quand les PV sont au max</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="8" data-id="400.0">
+                    <img src="../../../../images/ame-perfide.webp" alt="Image Perfides">
+                    <div class="text"><p>
+                        <b>Âme Mlle Courroux</b>
+                        <br><d>Chargement de la jauge d'att. un peu plus rapide</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="8" data-id="395.0">
+                    <img src="../../../../images/ame-perfide.webp" alt="Image Perfides">
+                    <div class="text"><p>
+                        <b>Âme Pariasolal</b>
+                        <br><d>Réduit légèrement les dégâts du vent</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="8" data-id="398.0">
+                    <img src="../../../../images/ame-perfide.webp" alt="Image Perfides">
+                    <div class="text"><p>
+                        <b>Âme Poulux</b>
+                        <br><d>Jauge d'attaque se charge un peu quand attaqué</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="8" data-id="405.0">
+                    <img src="../../../../images/ame-perfide.webp" alt="Image Perfides">
+                    <div class="text"><p>
+                        <b>Âme Ronéan</b>
+                        <br><d>Augmente les dégâts sur tous ennemis non-boss</d></p>
+                    </div>
+                </div>
+                <div class="item" data-tribu="8" data-id="399.0">
+                    <img src="../../../../images/ame-perfide.webp" alt="Image Perfides">
+                    <div class="text"><p>
+                        <b>Âme Sinisrénée</b>
+                        <br><d>Faible hausse de l'attaque quand les PV sont au max</d></p>
+                    </div>
+                </div>
+                <!-- Ajoutez d'autres divs ici -->
+            </div>
+        </div>
+    </header>
+</body>
+</html>
+  
