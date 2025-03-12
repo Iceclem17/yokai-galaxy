@@ -1,4 +1,4 @@
-fetch('/models/navbar/level0.html')
+fetch('/yokai-galaxy/models/navbar/level0.html')
   .then(response => {
     if (!response.ok) throw new Error(`Erreur ${response.status} - Impossible de charger la navbar`);
     return response.text();
