@@ -11,7 +11,7 @@ const yokaiList = [
   "Hibrouille", "Hibourling", "Espi", "Etassivilia", "Valetino", "Tengu", "Tengurou", "Kyubi",
   "Barakabo", "Chymère", "Chyper", "Potache", "Darabajoie", "Darumastar", "Goruma", "Jalouseriz",
   "Fanfanfaron", "Egare-dare", "Charivari", "Nanpart", "Passpa", "Granpart", "Loubarbare", "Racaïd",
-  "Frérosse", "Hauber", "Humainequin", "Boulapic", "Boulcadier", "Pachycoul", "Persévéfant", "Pachypipi",
+  "Frérosse", "Hauber", "Humainequin", "Boulapic", "Bouldacier", "Pachycoul", "Persévéfant", "Pachypipi",
   "Antonnerre", "Parantonn", "Suinthan", "Lama Laya", "Etna Magma", "Castelius III", "Castelius II", "Castelius I",
   "Castelius Max", "Coléroptère", "Rhinolimit", "Corniaque", "Robonyan", "Oronyan", "Misterre", "Ressak",
   "Crapop", "Geeko", "Gambeth", "Squarlett", "Margoth", "Squelèbelle", "Cigalopin", "Cigaillard",
