@@ -81,22 +81,23 @@ function getCookie(name) {
   return "";
 }
 
-// Restauration depuis le cookie
-const saved = getCookie("foundYokai");
-if (saved) {
-  const ids = saved.split(',');
-  ids.forEach(entry => {
-    foundYokai.add(entry);
-    const index = parseInt(entry.match(/\d+$/)[0]);
-    const name = yokaiList[index];
-    const cells = document.querySelectorAll(`.yokai-cell[data-name="${name}"]`);
-    cells.forEach(cell => {
-      const nameSpan = cell.querySelector(".name");
-      nameSpan.style.visibility = "visible";
-      nameSpan.style.color = "black"; // ou vert si tu veux
+function restoreFromCookie() {
+  const saved = getCookie("foundYokai");
+  if (saved) {
+    const ids = saved.split(',');
+    ids.forEach(entry => {
+      foundYokai.add(entry);
+      const index = parseInt(entry.match(/\d+$/)[0]);
+      const name = yokaiList[index];
+      const cells = document.querySelectorAll(`.yokai-cell[data-name="${name}"]`);
+      cells.forEach(cell => {
+        const nameSpan = cell.querySelector(".name");
+        nameSpan.style.visibility = "visible";
+        nameSpan.style.color = "green"; // tu peux mettre "black" si tu préfères
+      });
     });
-  });
-  counterDiv.textContent = `Nombre de Yo-kai trouvés : ${foundYokai.size} / ${yokaiList.length}`;
+    counterDiv.textContent = `Nombre de Yo-kai trouvés : ${foundYokai.size} / ${yokaiList.length}`;
+  }
 }
 
 
@@ -131,4 +132,5 @@ input.addEventListener("keyup", function () {
 
 // Appel de la fonction pour créer le tableau au démarrage
 createTable();
+restoreFromCookie();
 counterDiv.textContent = `Nombre de Yo-kai trouvés : 0 / ${yokaiList.length}`;
