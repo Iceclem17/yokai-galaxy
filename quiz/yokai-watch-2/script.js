@@ -6,7 +6,7 @@ const yokaiList = [
   "Sushiyama", "Kapunki", "Scatcheur", "Scarmouche", "Scarnage", "Démophage", "Vampéric", "Pleurapluie",
   "Gastong", "Morvobec", "Matchou", "Papa Ress", "Ralbouc", "Bastata", "Chaipô", "Mémogre",
   "Gagalurin", "Ovide", "Marra", "Violette", "Toutouïe", "Babalance", "Mémétal", "Cupistol",
-  "Donjuant", "Nonjuan", "Trodésolé", "Pardomino", "Brumette", "Brumella", "Padrézo", "Emettor",
+  "Donjouant", "Nonjuan", "Trodésolé", "Pardomino", "Brumette", "Brumella", "Padrézo", "Emettor",
   "Dynamo", "Maître Oden", "Mythovni", "Apélicain", "Télémir", "Triptic-tac", "Nuiroir", "Hiblusion",
   "Hibrouille", "Hibourling", "Espi", "Etassivilia", "Valetino", "Tengu", "Tengurou", "Kyubi",
   "Barakabo", "Chymère", "Chyper", "Potache", "Darabajoie", "Darumastar", "Goruma", "Jalouseriz",
