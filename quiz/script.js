@@ -63,6 +63,43 @@ function createTable() {
   tableauDiv.innerHTML = tableContent;
 }
 
+function setCookie(name, value, days) {
+  const d = new Date();
+  d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+  document.cookie = `${name}=${value}; expires=${d.toUTCString()}; path=/`;
+}
+
+function getCookie(name) {
+  const decoded = decodeURIComponent(document.cookie);
+  const cookies = decoded.split(';');
+  for (let c of cookies) {
+    while (c.charAt(0) === ' ') c = c.substring(1);
+    if (c.indexOf(name + "=") === 0) {
+      return c.substring(name.length + 1, c.length);
+    }
+  }
+  return "";
+}
+
+// Restauration depuis le cookie
+const saved = getCookie("foundYokai");
+if (saved) {
+  const ids = saved.split(',');
+  ids.forEach(entry => {
+    foundYokai.add(entry);
+    const index = parseInt(entry.match(/\d+$/)[0]);
+    const name = yokaiList[index];
+    const cells = document.querySelectorAll(`.yokai-cell[data-name="${name}"]`);
+    cells.forEach(cell => {
+      const nameSpan = cell.querySelector(".name");
+      nameSpan.style.visibility = "visible";
+      nameSpan.style.color = "black"; // ou vert si tu veux
+    });
+  });
+  counterDiv.textContent = `Nombre de Yo-kai trouvés : ${foundYokai.size} / ${yokaiList.length}`;
+}
+
+
 input.addEventListener("keyup", function () {
   const guess = input.value.trim().toLowerCase();
 
@@ -86,6 +123,8 @@ input.addEventListener("keyup", function () {
       });
       input.value = "";
       counterDiv.textContent = `Nombre de Yo-kai trouvés : ${foundYokai.size} / ${yokaiList.length}`;
+      // Sauvegarde dans le cookie (liste séparée par des virgules)
+      setCookie("foundYokai", Array.from(foundYokai).join(','), 7);
     }
   });
 });
