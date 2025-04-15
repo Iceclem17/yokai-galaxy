@@ -134,3 +134,11 @@ input.addEventListener("keyup", function () {
 createTable();
 counterDiv.textContent = `Nombre de Yo-kai trouvés : 0 / ${yokaiList.length}`;
 restoreFromCookie();
+
+
+document.getElementById("reset-progress").addEventListener("click", function () {
+  document.cookie = "foundYokai=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+  foundYokai.clear();
+  createTable();
+  counterDiv.textContent = `Nombre de Yo-kai trouvés : 0 / ${yokaiList.length}`;
+});

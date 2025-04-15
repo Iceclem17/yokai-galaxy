@@ -123,4 +123,19 @@ body {
     input[type="text"] {
         width: 55vw;
       }
+    
+    .grid-table {
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
   }
+
+  #reset-progress {
+    margin: 1rem;
+    padding: 0.5em 1em;
+    background-color: #ff5555;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
