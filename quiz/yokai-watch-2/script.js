@@ -30,7 +30,7 @@ const yokaiList = [
   "Hâtila", "Amédélègue", "Comte Zapzap", "Raltesse", "Tengubre", "Bibliotengu", "Snobéa", "Triptyk",
   "Dracunyan", "Nimpégase", "Hennimi", "Timidémon", "Belzel", "Dente", "Millyeux", "Précyeux",
   "Vénaldo", "Maltesse", "Potofeu", "Malmidal", "Écchinose", "Humidon", "Délujien", "Fryzeur",
-  "Kongel", "Hémorhino", "Chiperpiou", "Rapiaf", "Ploubidou", "Zikafon", "Babarouf", "Flamente",
+  "Kongel", "Hémorhino", "Chiperpiou", "Rapiaf", "Pioubidou", "Zikafon", "Babarouf", "Flamente",
   "Volibrius", "Volatriste", "Corniot", "Bicorniot", "Cerbébert", "Poilux", "Poil-Émile", "Non-non",
   "Lulugubre", "Blablara", "Umilie", "Pépésbrouf", "Adolfo Jeton", "Pégaz", "Méphito", "Ornella",
   "Sornella", "Crocho", "Misterbide", "Flopito", "Cenridion", "Jouvencia", "Éterna", "Insomnelle",
