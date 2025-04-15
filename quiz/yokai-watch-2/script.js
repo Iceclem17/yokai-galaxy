@@ -1,7 +1,7 @@
 const yokaiList = [
   "Woko", "Pagno", "Alfoncéo", "Toumou", "Lamlam'mou", "Samoumouraï", "Samoussrai", "Ronimpec",
   "Roupilion", "Rugis", "Trépigno", "Zerberker", "Fouétar", "Sumochi", "Mochimacho", "Sale de bain",
-  "Agonigri", "Onigrix", "Heaumer", "Bushidos", "Âmiral", "Bouh", "Coach Antonic", "Feulion",
+  "Agonigiri", "Onigirix", "Heaumer", "Bushidos", "Âmiral", "Bouh", "Coach Antonic", "Feulion",
   "Vibrilion", "Siro", "Bonneto", "Sabri", "Padelou", "Orox", "Benkei", "B3-NK1",
   "Sushiyama", "Kapunki", "Scatcheur", "Scarmouche", "Scarnage", "Démophage", "Vampéric", "Pleurapluie",
   "Gastong", "Morvobec", "Matchou", "Papa Ress", "Ralbouc", "Bastata", "Chaipô", "Mémogre",
