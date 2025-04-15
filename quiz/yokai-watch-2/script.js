@@ -53,7 +53,7 @@ const yokaiList = [
   "McKraken", "McKraken", "Rancornet", "Volteface", "Didgeai", "Potofeu", "Firmain", "Tromploeil",
   "Taprice", "Barbebluff", "Mariotte", "Maribass", "Lady Maggle", "Filomène", "Blingos", "Bogos",
   "Maximain", "Cycloptique", "Gargaros", "Ogralos", "Orqanos", "Narinos", "Ultramax N", "Ultramax K",
-  "Jibanyan S", "Komasan S", "Komajiro S", "Obskyurbi", "Illuminoct", "Gargaros", "Ogralos", "Orqanos",
+  "Jibanyan S", "Komasan S", "Komajiro S", "Obskyurbi", "Luminoct", "Gargaros", "Ogralos", "Orqanos",
   "Jiganyan", "Komak", "Domniscian", "Ambronzio", "Thénuki", "Infiniris", "Chomino", "Extrabuki"
 ];
 
