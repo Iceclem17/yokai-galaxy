@@ -36,7 +36,7 @@ const yokaiList = [
   "Sornella", "Crocho", "Misterbide", "Flopito", "Cenridion", "Jouvencia", "Éterna", "Insomnelle",
   "Morféa", "Arachnus", "Arachnia", "Crampaud", "Noko", "Nénunoko", "Pandanoko", "Maudieuse",
   "Jérémya", "Anghihihille", "Méroubadour", "Urnaconda", "Murhaine", "Saumhonni", "Vexturgeon", "Yvantouse",
-  "Ed Mémoire", "Scoltine", "Scolérique", "Dracounet", "Sire Drgon", "Dragô", "Sirénée", "Sirènité",
+  "Ed Mémoire", "Scoltine", "Scolérique", "Dracounet", "Sire Dragon", "Dragô", "Sirénée", "Sirènité",
   "Sireine-mère", "Mlle Coucou", "Bababou", "Tourneboul", "Croquin", "Inisquale", "Claquille", "Cocpille",
   "Jacquasseur", "Bananar", "Draconfus", "Carpitaine", "Vipètesec", "Vipérâle", "Vipairflay", "Octorgone",
   "Octorgombre", "Shogunyan", "Komashura", "Gorgouille", "Déballerine", "Camaïeul", "Savantard", "Cabotin",
