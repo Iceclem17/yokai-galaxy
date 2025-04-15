@@ -93,7 +93,7 @@ function restoreFromCookie() {
       cells.forEach(cell => {
         const nameSpan = cell.querySelector(".name");
         nameSpan.style.visibility = "visible";
-        nameSpan.style.color = "green"; // tu peux mettre "black" si tu préfères
+        nameSpan.style.color = "black";
       });
     });
     counterDiv.textContent = `Nombre de Yo-kai trouvés : ${foundYokai.size} / ${yokaiList.length}`;
@@ -132,5 +132,5 @@ input.addEventListener("keyup", function () {
 
 // Appel de la fonction pour créer le tableau au démarrage
 createTable();
-restoreFromCookie();
 counterDiv.textContent = `Nombre de Yo-kai trouvés : 0 / ${yokaiList.length}`;
+restoreFromCookie();
