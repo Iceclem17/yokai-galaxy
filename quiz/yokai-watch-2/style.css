@@ -1,0 +1,141 @@
+html{
+  scroll-behavior:smooth;
+}
+
+header nav{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  padding:20px;
+  color:#000;
+  background-color: #333333;
+}
+
+header nav a{
+  color:#bababa;
+  text-decoration:none;
+  margin-right:10px;
+}
+
+
+header nav a:hover {
+  color:#fff;
+  border-bottom: #919191 solid 1px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f9f9f9;
+    padding: 0;
+    margin:0;
+  }
+  
+  h1 {
+    color: #d83b01;
+    text-align: center;
+  }
+  
+  #game
+  {
+    padding: 15px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 15px;
+    text-align: center;
+  }
+
+  input[type="text"] {
+    padding: 10px;
+    font-size: 1em;
+    width: 300px;
+  }
+  
+  #found {
+    margin-top: 20px;
+  }
+  
+  .yokai {
+    display: inline-block;
+    margin: 5px;
+    padding: 8px 12px;
+    background: #e0ffe0;
+    border-radius: 12px;
+  }
+  
+  #counter {
+    margin-top: 20px;
+    font-size: 1em;
+    color: #333;
+  }
+  
+  #tableau {
+    margin-top: 40px;
+    font-size: 16px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+
+  .grid-table {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  .yokai-cell {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 6px;
+    text-align: center;
+    background-color: white;
+  }
+  
+  .yokai-cell .number {
+    display: block;
+    font-weight: bold;
+    font-size: 0.9em;
+    color: #888;
+  }
+  
+  .yokai-cell .name {
+    display: block;
+    font-size: 1em;
+    margin-top: 4px;
+  }
+  
+  @media (max-width: 450px) {
+    input[type="text"] {
+        width: 55vw;
+      }
+    
+    .grid-table {
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+  }
+
+  #reset-progress {
+    margin: 1rem;
+    padding: 0.5em 1em;
+    background-color: #ff5555;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
