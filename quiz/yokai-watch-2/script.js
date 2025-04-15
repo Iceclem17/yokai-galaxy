@@ -51,7 +51,7 @@ const yokaiList = [
   "Marge", "Lady Perpétua", "Lady Démona", "Triptyk", "Hydreux", "Crocho", "Porcinator", "Carpitaine",
   "Styx VI", "Ombraptor", "Nébulor", "Sabroclair", "Hagacurée", "Inamygal", "Dr Jobard", "Pr Létripe",
   "McKraken", "McKraken", "Rancornet", "Volteface", "Didgeai", "Potofeu", "Firmain", "Tromploeil",
-  "Taprice", "Barbebluff", "Mariotte", "Maribass", "Lady Maggle", "Filomène", "Blingos", "Bogos",
+  "Taprice", "Barbebluff", "Mariotte", "Maribass", "Lady Maggie", "Filomène", "Blingos", "Bogos",
   "Maximain", "Cycloptique", "Gargaros", "Ogralos", "Orqanos", "Narinos", "Ultramax N", "Ultramax K",
   "Jibanyan S", "Komasan S", "Komajiro S", "Obskyurbi", "Luminoct", "Gargaros", "Ogralos", "Orqanos",
   "Jiganyan", "Komak", "Domniscian", "Ambronzio", "Thénuki", "Infiniris", "Chomino", "Extrabuki"
