@@ -114,7 +114,7 @@ function getCookie(name) {
 }
 
 function restoreFromCookie() {
-  const saved = getCookie("foundYokai");
+  const saved = getCookie("yokaiWatch2FoundYokai");
   if (saved) {
     const ids = saved.split(',');
     ids.forEach(entry => {
@@ -157,7 +157,7 @@ input.addEventListener("keyup", function () {
       input.value = "";
       counterDiv.textContent = `Nombre de Yo-kai trouvés : ${foundYokai.size} / ${yokaiList.length}`;
       // Sauvegarde dans le cookie (liste séparée par des virgules)
-      setCookie("foundYokai", Array.from(foundYokai).join(','), 7);
+      setCookie("yokaiWatch2FoundYokai", Array.from(foundYokai).join(','), 7);
     }
   });
 });
@@ -169,7 +169,7 @@ restoreFromCookie();
 
 
 document.getElementById("reset-progress").addEventListener("click", function () {
-  document.cookie = "foundYokai=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+  document.cookie = "yokaiWatch2FoundYokai=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
   foundYokai.clear();
   createTable();
   counterDiv.textContent = `Nombre de Yo-kai trouvés : 0 / ${yokaiList.length}`;
