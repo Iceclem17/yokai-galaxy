@@ -2,7 +2,7 @@ const yokaiList = [
   "Woko", "Pagno", "Alfoncéo", "Toumou", "Lamlam'mou", "Samoumouraï", "Samoussrai", "Ronimpec",
   "Roupilion", "Rugis", "Trépigno", "Zerberker", "Fouétar", "Sumochi", "Mochimacho", "Sale de bain",
   "Agonigri", "Onigrix", "Heaumer", "Bushidos", "Âmiral", "Bouh", "Coach Antonic", "Feulion",
-  "Vibrilion", "Siro", "Bonneto", "Sabri", "Padelou", "Orox", "Benkei", "B-NK",
+  "Vibrilion", "Siro", "Bonneto", "Sabri", "Padelou", "Orox", "Benkei", "B3-NK1",
   "Sushiyama", "Kapunki", "Scatcheur", "Scarmouche", "Scarnage", "Démophage", "Vampéric", "Pleurapluie",
   "Gastong", "Morvobec", "Matchou", "Papa Ress", "Ralbouc", "Bastata", "Chaipô", "Mémogre",
   "Gagalurin", "Ovide", "Marra", "Violette", "Toutouïe", "Babalance", "Mémétal", "Cupistol",
