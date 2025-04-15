@@ -43,7 +43,7 @@ const yokaiList = [
   "Slurpent", "Saphinyan", "Émeranyan", "Rubinyan", "Topanyan", "Diamanyan", "Melonyan", "Oranyan",
   "Kiwinyan", "Vigninyan", "Maranyan", "Pastènyan", "Robocap", "Robokoma", "Robopapéti", "Robocorniot",
   "Robonoko", "Robodracou", "Boucanyan", "Robonyan F", "Sailornyan", "Maskonyan", "Hovernyan", "Darknyan",
-  "Jibakoma", "Jetnyan", "Injustin", "Flelippine", "Cyrustre", "Maudicko", "Ronéan", "Gale de bain",
+  "Jibakoma", "Jetnyan", "Injustin", "Fielippine", "Cyrustre", "Maudicko", "Ronéan", "Gale de bain",
   "Mabouhl", "Fumella", "Fou Kappa", "Pariasolal", "Fatalutin", "Métaréaulog", "Poulux", "Sinisrénée",
   "Mlle Courroux", "Mélobê", "Geigneau", "Bon-huili", "Verrascible", "Petit panja", "Panja-san", "Samuren",
   "Barrakéda", "Poulpatouch", "Poulpater", "Avallée", "Mont merci", "Sumodon", "Soupotori", "Pfffuji",
