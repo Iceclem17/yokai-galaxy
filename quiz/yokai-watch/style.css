@@ -129,6 +129,19 @@ body {
     }
   }
 
+  @media (max-width: 440px) {
+    .yokai-cell .name {
+      font-size: 1em;
+    }
+  }
+  
+  @media (min-width: 340px) and (max-width: 439px) {
+    .yokai-cell .name {
+      font-size: 0.75em;
+    }
+  }
+  
+
   #reset-progress {
     margin: 1rem;
     padding: 0.5em 1em;
