@@ -49,7 +49,7 @@ const yokaiList = [
   "Barrakéda", "Poulpatouch", "Poulpater", "Avallée", "Mont merci", "Sumodon", "Soupotori", "Pfffuji",
   "Krakatouaaah", "Lacanne", "Canastelle", "Grolos", "Méganyan", "Barbefrousse", "Tourboeillon", "Laure",
   "Marge", "Lady Perpétua", "Lady Démona", "Triptyk", "Hydreux", "Crocho", "Porcinator", "Carpitaine",
-  "Styx VI", "Ombraptor", "Nébulor", "Sabroclair", "Hagacurée", "Inamygal", "Dr. Jobard", "Pr Létripe",
+  "Styx VI", "Ombraptor", "Nébulor", "Sabroclair", "Hagacurée", "Inamygal", "Dr Jobard", "Pr Létripe",
   "McKraken", "McKraken", "Rancornet", "Volteface", "Didgeai", "Potofeu", "Firmain", "Tromploeil",
   "Taprice", "Barbebluff", "Mariotte", "Maribass", "Lady Maggle", "Filomène", "Blingos", "Bogos",
   "Maximain", "Cycloptique", "Gargaros", "Ogralos", "Orqanos", "Narinos", "Ultramax N", "Ultramax K",
@@ -67,7 +67,7 @@ function normalize(str) {
   return str
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
-    .replace(/['’\s\-]/g, "")
+    .replace(/['’\s\-\.]/g, "")
     .toLowerCase();
 }
 
