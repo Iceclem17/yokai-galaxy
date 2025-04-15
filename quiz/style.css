@@ -1,0 +1,102 @@
+html{
+    scroll-behavior:smooth;
+  }
+  
+  body{
+    margin: 0;
+    padding:0;
+    font-family: Arial, sans-serif;
+    background-color: #bababa;
+  }
+  
+  header{
+    height:100vh;
+    background: url('images/image-bg.jpg');
+    background-position: center;
+    color: #fff;
+    text-align:center;
+  }
+  
+  header nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    padding:20px;
+    color:#000;
+    background-color: #333333;
+  }
+  
+  header nav a{
+    color:#bababa;
+    text-decoration:none;
+    margin-right:10px;
+  }
+  
+  
+  header nav a:hover {
+    color:#fff;
+    border-bottom: #919191 solid 1px;
+  }
+
+  header .principal{
+    margin-top: 50px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    color: #000;
+  }
+
+  header .principal h4{
+    align-items: center;
+  }
+
+  .principal {
+    padding: 15px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+  
+.principal .quiz img {
+  padding: 10px;
+  margin: 20px;
+  width: 40vw;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+
+@media screen and (max-width: 1100px) and (min-width: 750px) {
+  .principal .jeux img {
+    width: 80vw;
+  }
+}
+
+@media screen and (max-width: 750px) and (min-width: 426px) {
+  .principal .jeux img {
+    width: 60vw;
+    margin: auto;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 426px) and (min-width: 376px) {
+  .principal .jeux img {
+    width: 75vw;
+    margin: auto;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .principal .jeux img {
+    width: 85vw;
+    padding: 0px;
+    margin: auto;
+    margin-top: 20px;
+  }
+  .principal {
+    margin: 10px;
+  }
+}
