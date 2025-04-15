@@ -20,7 +20,7 @@ const yokaiList = [
   "Komistigri", "Baku", "Bakuku", "Tapur", "Sabruine", "Vito", "Pitou", "Choubidou",
   "Satandre", "Timours", "Angélik", "Blizzaria", "Damona", "Faux Kappa", "Kappadissi", "Maitre Nyada",
   "Amoiz", "Pikor", "Noripop", "Algacarena", "Wakapoeira", "Salsalga", "Granpapéti", "Puissanfon",
-  "Grainpère", "Papilla", "Mlle Papilla", "Felipaix", "Monsieur Felipaix", "Parasolal", "Scarasol", "Nomoné",
+  "Grainpère", "Papilla", "Mme Papilla", "Felipaix", "Monsieur Felipaix", "Parasolal", "Scarasol", "Nomoné",
   "Ivanupieds", "Noproblemo", "Lulutin", "Grégrigry", "Papiltation", "Papiltension", "Hyprapillon", "Vitapillon",
   "Métaureaulog", "Tauracle", "Donchan", "Sabrille", "Jojojoyeux", "Paradoxa", "Potaumorose", "Ratatam",
   "Supernoël", "Dédé", "Dédestin", "Tontonerre", "Omnitonton", "Tata Aura", "Tata Câlin", "Kyryn",
