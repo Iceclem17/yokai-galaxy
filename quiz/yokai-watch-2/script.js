@@ -29,7 +29,7 @@ const yokaiList = [
   "Suspicioni", "Ragioni", "Contrarioni", "Chauvekipeut", "Chauv'coucou", "Vampiloc", "Gloups", "Chip-Chope",
   "Hâtila", "Amédélègue", "Comte Zapzap", "Raltesse", "Tengubre", "Bibliotengu", "Snobéa", "Triptyk",
   "Dracunyan", "Nimpégase", "Hennimi", "Timidémon", "Belzel", "Dente", "Millyeux", "Précyeux",
-  "Vénaldo", "Maltesse", "Potofeu", "Malmidal", "Échinose", "Humidon", "Délujien", "Fryzeur",
+  "Vénaldo", "Maltesse", "Potofeu", "Malmidal", "Écchinose", "Humidon", "Délujien", "Fryzeur",
   "Kongel", "Hémorhino", "Chiperpiou", "Rapiaf", "Ploubidou", "Zikafon", "Babarouf", "Flamente",
   "Volibrius", "Volatriste", "Corniot", "Bicorniot", "Cerbébert", "Poilux", "Poil-Émile", "Non-non",
   "Lulugubre", "Blablara", "Umilie", "Pépésbrouf", "Adolfo Jeton", "Pégaz", "Méphito", "Ornella",
@@ -52,8 +52,8 @@ const yokaiList = [
   "Styx VI", "Ombraptor", "Nébulor", "Sabroclair", "Hagacurée", "Inamygal", "Dr. Jobard", "Pr Létripe",
   "McKraken", "McKraken", "Rancornet", "Volteface", "Didgeai", "Potofeu", "Firmain", "Tromploeil",
   "Taprice", "Barbebluff", "Mariotte", "Maribass", "Lady Maggle", "Filomène", "Blingos", "Bogos",
-  "Maximain", "Cycloptique", "Gargaros", "Orgalos", "Orqanos", "Narinos", "Ultramax N", "Ultramax K",
-  "Jibanyan S", "Komasan S", "Komajiro S", "Obskyurbi", "Illuminoct", "Gargaros", "Orgalos", "Orqanos",
+  "Maximain", "Cycloptique", "Gargaros", "Ogralos", "Orqanos", "Narinos", "Ultramax N", "Ultramax K",
+  "Jibanyan S", "Komasan S", "Komajiro S", "Obskyurbi", "Illuminoct", "Gargaros", "Ogralos", "Orqanos",
   "Jiganyan", "Komak", "Domniscian", "Ambronzio", "Thénuki", "Infiniris", "Chomino", "Extrabuki"
 ];
 
