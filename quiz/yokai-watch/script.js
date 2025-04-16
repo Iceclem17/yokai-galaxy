@@ -86,8 +86,10 @@ function restoreFromCookie() {
   if (saved) {
     const ids = saved.split(',');
     ids.forEach(entry => {
-      foundYokai.add(entry);
-      const index = parseInt(entry.match(/\d+$/)[0]);
+      const index = parseInt(entry);
+      if (!isNaN(index)) {
+        foundYokai.add(index);
+      }
       const name = yokaiList[index];
       const cells = document.querySelectorAll(`.yokai-cell[data-name="${name}"]`);
       cells.forEach(cell => {
@@ -109,10 +111,10 @@ input.addEventListener("keyup", function () {
 
   // Si le Yo-kai est trouvé, marque toutes ses occurrences
   yokaiList.forEach((name, index) => {
-    if (normalize(name) === normalize(guess) && !foundYokai.has(name + index)) {
+    if (normalize(name) === normalize(guess) && !foundYokai.has(index)) {
       const duplicateIndices = getDuplicateIndices(name);
       duplicateIndices.forEach(duplicateIndex => {
-        foundYokai.add(name + duplicateIndex); // Marquer tous les doublons comme trouvés
+        foundYokai.add(duplicateIndex); // Marquer tous les doublons comme trouvés
 
         // Mettre à jour le statut du Yo-kai dans le tableau
         const cells = document.querySelectorAll(`.yokai-cell[data-name="${name}"]`);
