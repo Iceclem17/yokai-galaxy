@@ -214,3 +214,14 @@ html{
     padding: 10px;
   }
 }
+
+body::after {
+  content: "CSS OK";
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: lime;
+  color: black;
+  padding: 4px;
+  z-index: 9999;
+}
