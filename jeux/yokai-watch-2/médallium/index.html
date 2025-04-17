@@ -6,7 +6,7 @@
     <title>Médallium - Yo-kai Watch 2 - Yo-kai Galaxy</title>
     <link rel="icon" type="image/png" href="../../../images/icon.png" />
     <link href="style.css" rel="stylesheet">
-    <script src="wheelzoom.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom@9.0.0/dist/panzoom.min.js"></script>
 </head>
 <body>
   <header>
@@ -27,6 +27,21 @@
       border: none;
     }
   </style>
+  <script>
+    // Sélectionner l'élément de la div que vous voulez rendre zoomable
+    const element = document.getElementById('spreadsheet');
+
+    // Initialiser Panzoom sur cet élément
+    const panzoom = Panzoom(element, {
+      maxScale: 5,  // Zoom maximum
+      minScale: 0.5, // Zoom minimum
+      contain: 'outside'  // Contenir le contenu à l'extérieur de la zone
+    });
+
+    // Ajouter l'événement de zoom avec la molette de la souris
+    element.addEventListener('wheel', panzoom.zoomWithWheel);
+  </script>
+
   <script>
     fetch('spreadsheet/Yo-kai-Medallium.html')
       .then(response => {
