@@ -36,35 +36,3 @@ html{
     color:#fff;
     border-bottom: #919191 solid 1px;
   }
-
-  #navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    text-align: center;
-  }
-
-  #spreadsheet {
-    margin-top: 50px;
-    overflow: hidden;
-    width: 100%;
-    height: auto;
-  }
-
-  /* Zoom sur la div contenant la feuille */
-  #spreadsheet iframe {
-    width: 100%;
-    height: 800px;
-    border: none;
-  }
-
-  /* Appliquer un zoom sur la div */
-  .zoomable {
-    transform: scale(1);
-    transform-origin: top left;
-    transition: transform 0.2s ease;
-  }
-
-  .zoomable:hover {
-    transform: scale(1.2); /* Applique le zoom ici, ajuste le facteur */
-  }
