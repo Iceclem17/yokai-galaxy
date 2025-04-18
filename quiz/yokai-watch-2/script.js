@@ -45,7 +45,7 @@ const yokaiList = [
   "Robonoko", "Robodracou", "Boucanyan", "Robonyan F", "Sailornyan", "Maskonyan", "Hovernyan", "Darknyan",
   "Jibakoma", "Jetnyan", "Injustin", "Fielippine", "Cyrustre", "Maudicko", "Ronéan", "Gale de bain",
   "Mabouhl", "Fumella", "Fou Kappa", "Pariasolal", "Fatalutin", "Métaréaulog", "Poulux", "Sinisrénée",
-  "Mlle Courroux", "Mélobê", "Geigneau", "Bon-huili", "Verrascible", "Petit panja", "Panja-san", "Samuren",
+  "Mlle Courroux", "Mélobê", "Geigneau", "Bon-huiii", "Verrascible", "Petit panja", "Panja-san", "Samuren",
   "Barrakéda", "Poulpatouch", "Poulpater", "Avallée", "Mont merci", "Sumodon", "Soupotori", "Pfffuji",
   "Krakatouaaah", "Lacanne", "Canastelle", "Grolos", "Méganyan", "Barbefrousse", "Tourboeillon", "Laure",
   "Marge", "Lady Perpétua", "Lady Démona", "Triptyk", "Hydreux", "Crocho", "Porcinator", "Carpitaine",
