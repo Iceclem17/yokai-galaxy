@@ -17,26 +17,61 @@ html{
     text-align:center;
   }
   
-  header nav{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:space-between;
-    padding:20px;
-    color:#000;
-    background-color: #333333;
-  }
-  
-  header nav a{
-    color:#bababa;
-    text-decoration:none;
-    margin-right:10px;
-  }
-  
-  
-  header nav a:hover {
-    color:#fff;
-    border-bottom: #919191 solid 1px;
-  }
+  /* ============ BARRE DE NAVIGATION ============ */
+nav {
+    display: flex;
+    justify-content: space-between; /* Espace entre le logo et les liens */
+    align-items: center;
+    padding: 15px 40px;
+    background-color: rgba(30, 30, 30, 0.95); /* Fond sombre semi-transparent */
+    backdrop-filter: blur(5px);
+    position: fixed; /* Reste collé en haut */
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    border-bottom: 2px solid #3d3d3d;
+}
+
+/* Le côté gauche (Logo/Accueil) */
+nav .logo a {
+    font-family: 'Bangers', cursive;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    color: #ffffff; /* Yo-Kai Galaxy en BLANC */
+    text-transform: uppercase;
+    text-shadow: 0 0 5px rgba(255,255,255,0.5); /* Petite ombre blanche pour ressortir */
+}
+
+/* Le côté droit (Les onglets) */
+nav .onglets {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+/* Effet au survol des liens */
+nav .onglets a:hover {
+    background-color: #3498db; /* Bleu style Whisper */
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(52, 152, 219, 0.4);
+}
+
+nav .logo a:hover {
+    text-shadow: 0 0 15px #ffffff;
+    background: none;
+    transform: scale(1.05);
+}
 
   header .principal{
     margin-top: 50px;
