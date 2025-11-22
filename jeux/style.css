@@ -11,7 +11,9 @@ html{
   
   header{
     height:100vh;
-    background: url('images/image-bg.jpg');
+    width: 100%;
+    display: flex;
+    background: url('../images/yokai-background.png');
     background-position: center;
     color: #fff;
     text-align:center;
