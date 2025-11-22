@@ -1,59 +1,162 @@
-html{
-    scroll-behavior:smooth;
-  }
-  
-  body{
-    margin: 0;
-    padding:0;
-    font-family: Arial, sans-serif;
-  }
-  
-  header{
-    height:100vh;
-    background: url('images/image-bg.jpg');
-  background-position: center;
-    color: #fff;
-    text-align:center;
-  }
-  
-  header nav{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:space-between;
-    padding:20px;
-    color:#000;
-    background-color: #333333;
-  }
-  
-  header nav a{
-    color:#bababa;
-    text-decoration:none;
-    margin-right:10px;
-  }
-  
-  
-  header nav a:hover {
-    color:#fff;
-    border-bottom: #919191 solid 1px;
-  }
-
-  header .principal{
-    margin-top: 80px;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    color: #000;
-  }
-
-  header .principal h4{
-    align-items: center;
-  }
-
-  .principal {
-    padding: 15px;
-    margin: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+/* ============ RESET ET BASE ============ */
+* {
+    box-sizing: border-box;
 }
-  
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Fredoka', Arial, sans-serif;
+    background-color: #2c3e50; /* Couleur de fond de secours */
+}
+
+/* ============ BARRE DE NAVIGATION ============ */
+nav {
+    display: flex;
+    justify-content: space-between; /* Espace entre le logo et les liens */
+    align-items: center;
+    padding: 15px 40px;
+    background-color: rgba(30, 30, 30, 0.95); /* Fond sombre semi-transparent */
+    backdrop-filter: blur(5px);
+    position: fixed; /* Reste collé en haut */
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    border-bottom: 2px solid #3d3d3d;
+}
+
+/* Le côté gauche (Logo/Accueil) */
+nav .logo a {
+    font-family: 'Bangers', cursive;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    color: #ffffff; /* Yo-Kai Galaxy en BLANC */
+    text-transform: uppercase;
+    text-shadow: 0 0 5px rgba(255,255,255,0.5); /* Petite ombre blanche pour ressortir */
+}
+
+/* Le côté droit (Les onglets) */
+nav .onglets {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+/* Effet au survol des liens */
+nav .onglets a:hover {
+    background-color: #3498db; /* Bleu style Whisper */
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(52, 152, 219, 0.4);
+}
+
+nav .logo a:hover {
+    text-shadow: 0 0 15px #ffffff;
+    background: none;
+    transform: scale(1.05);
+}
+
+/* ============ HEADER (IMAGE DE FOND) ============ */
+header {
+    height: 100vh; /* Prend 100% de la hauteur de l'écran */
+    width: 100%;
+    /* Ton image de fond personnalisée */
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('yokai-background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Effet parralax sympa */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ============ LA CARTE PRINCIPALE (MODERNE) ============ */
+.principal {
+    padding: 50px;
+    margin: 20px;
+    max-width: 700px;
+    width: 90%;
+    
+    /* L'effet "Glassmorphism" (Verre dépoli) */
+    background-color: rgba(255, 255, 255, 0.85); 
+    backdrop-filter: blur(12px); 
+    -webkit-backdrop-filter: blur(12px);
+    
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    
+    text-align: center;
+    color: #2c3e50; /* Texte sombre pour contraster avec le fond clair */
+    
+    /* Animation d'entrée */
+    animation: floatUp 1s ease-out forwards;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.principal h1 {
+    font-family: 'Bangers', cursive;
+    font-size: 3.5rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    /* Dégradé sur le texte */
+    background: linear-gradient(45deg, #ff3e3e, #9b3eff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+}
+
+.principal h4 {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    font-weight: 400;
+    margin: 0;
+}
+
+.principal b {
+    color: #2980b9; /* Bleu pour les mots clés importants */
+    font-weight: 600;
+}
+
+/* Animation Keyframes */
+@keyframes floatUp {
+    to {
+opacity: 1;
+transform: translateY(0);
+    }
+}
+
+/* ============ RESPONSIVE (MOBILE) ============ */
+@media (max-width: 768px) {
+    nav {
+flex-direction: column;
+padding: 10px;
+    }
+    nav .onglets {
+margin-top: 10px;
+flex-wrap: wrap;
+justify-content: center;
+    }
+    .principal h1 {
+font-size: 2.5rem;
+    }
+    .principal {
+padding: 30px;
+    }
+}
