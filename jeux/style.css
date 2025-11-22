@@ -1,49 +1,61 @@
-html{
-    scroll-behavior:smooth;
-  }
-  
-  body{
+/* ============ RESET & BASE ============ */
+/* IMPORTANT : Ceci empêche la barre de nav de dépasser (scroll horizontal) */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
     margin: 0;
-    padding:0;
-    font-family: Arial, sans-serif;
-    background-color: #bababa;
-  }
-  
-  header{
-    height:100vh;
-    background: url('../images/yokai-background.png');
-    background-position: center;
-    color: #fff;
-    text-align:center;
-  }
-  
-  /* ============ BARRE DE NAVIGATION ============ */
+    padding: 0;
+    font-family: 'Fredoka', Arial, sans-serif;
+    
+    /* 3. LE BACKGROUND FIXE EST DÉPLACÉ ICI */
+    /* L'image est sur le body, donc elle est tout le temps là */
+    background: url('../images/yokai-background.png'); 
+    background-size: cover;       /* Couvre tout l'écran */
+    background-position: center;  /* Centré */
+    background-attachment: fixed; /* MAGIQUE : L'image ne bouge pas au scroll */
+    background-repeat: no-repeat;
+    
+    /* Couleur de fond si l'image ne charge pas */
+    background-color: #2c3e50;
+    color: #000;
+}
+
+/* ============ BARRE DE NAVIGATION ============ */
 nav {
     display: flex;
-    justify-content: space-between; /* Espace entre le logo et les liens */
+    justify-content: space-between;
     align-items: center;
     padding: 15px 40px;
-    background-color: rgba(30, 30, 30, 0.95); /* Fond sombre semi-transparent */
+    background-color: rgba(30, 30, 30, 0.95);
     backdrop-filter: blur(5px);
-    position: fixed; /* Reste collé en haut */
-    width: 100%;
+    
+    /* POSITION FIXE */
+    position: fixed;
     top: 0;
+    left: 0; /* 2. FIX DU DÉBORDEMENT : On force le démarrage à gauche */
+    width: 100%; /* Prend 100% de la largeur */
+    
     z-index: 1000;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     border-bottom: 2px solid #3d3d3d;
 }
 
-/* Le côté gauche (Logo/Accueil) */
 nav .logo a {
     font-family: 'Bangers', cursive;
     font-size: 1.5rem;
     letter-spacing: 1px;
-    color: #ffffff; /* Yo-Kai Galaxy en BLANC */
+    color: #ffffff;
     text-transform: uppercase;
-    text-shadow: 0 0 5px rgba(255,255,255,0.5); /* Petite ombre blanche pour ressortir */
+    text-decoration: none; /* Enlève le soulignement du lien */
+    text-shadow: 0 0 5px rgba(255,255,255,0.5);
 }
 
-/* Le côté droit (Les onglets) */
 nav .onglets {
     display: flex;
     gap: 20px;
@@ -59,9 +71,8 @@ nav a {
     transition: all 0.3s ease;
 }
 
-/* Effet au survol des liens */
 nav .onglets a:hover {
-    background-color: #3498db; /* Bleu style Whisper */
+    background-color: #3498db;
     color: white;
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(52, 152, 219, 0.4);
@@ -73,65 +84,80 @@ nav .logo a:hover {
     transform: scale(1.05);
 }
 
-  header .principal{
-    margin-top: 50px;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    color: #000;
-  }
-
-  header .principal h4{
+/* ============ HEADER & CONTENU ============ */
+header {
+    /* J'ai enlevé le background ici car il est maintenant sur le body */
+    /* J'ai enlevé height: 100vh pour que le header s'adapte à la taille du contenu */
+    min-height: 100vh; 
+    
+    display: flex;
+    flex-direction: column;
     align-items: center;
-  }
+    justify-content: center; /* Centre verticalement si peu de contenu */
+    padding-top: 100px; /* IMPORTANT : Pour ne pas être caché par la navbar fixe */
+    padding-bottom: 50px;
+}
 
-  .principal {
-    padding: 15px;
+.principal {
+    padding: 30px;
     margin: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background-color: rgba(255, 255, 255, 0.9); /* Un peu transparent pour voir le fond */
+    border-radius: 15px; /* Coins plus ronds */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    text-align: center;
+    /*max-width: 1000px; /* Limite la largeur pour que ce soit joli */
 }
-  
+
+.principal h4 {
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+/* ============ IMAGES JEUX ============ */
 .principal .jeux img {
-  padding: 10px;
-  margin: 20px;
-  width: 40vw;
-  border-radius: 30px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 10px;
+    margin: 20px;
+    width: 40vw;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
 }
 
+.principal .jeux img:hover {
+    transform: scale(1.02);
+}
 
+/* ============ RESPONSIVE ============ */
 @media screen and (max-width: 1100px) and (min-width: 750px) {
-  .principal .jeux img {
-    width: 80vw;
-  }
+    .principal .jeux img {
+        width: 80vw;
+    }
 }
 
-@media screen and (max-width: 750px) and (min-width: 426px) {
-  .principal .jeux img {
-    width: 60vw;
-    margin: auto;
-    margin-top: 20px;
-  }
+@media (max-width: 768px) {
+    /* Responsive menu pour mobile */
+    nav {
+        flex-direction: column;
+        padding: 10px;
+    }
+    nav .onglets {
+        margin-top: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    header {
+        padding-top: 140px; /* Plus d'espace car la nav est plus haute en mobile */
+    }
 }
 
-@media screen and (max-width: 426px) and (min-width: 376px) {
-  .principal .jeux img {
-    width: 75vw;
-    margin: auto;
-    margin-top: 20px;
-  }
-}
-
-@media screen and (max-width: 376px) {
-  .principal .jeux img {
-    width: 85vw;
-    padding: 0px;
-    margin: auto;
-    margin-top: 20px;
-  }
-  .principal {
-    margin: 10px;
-  }
+@media screen and (max-width: 750px) {
+    .principal .jeux img {
+        width: 90vw; /* Prend presque toute la largeur sur mobile */
+        margin: 10px auto;
+        display: block; /* Centre l'image */
+    }
+    .principal {
+        margin: 10px;
+        padding: 15px;
+    }
 }
