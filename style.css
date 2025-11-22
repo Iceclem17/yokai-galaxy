@@ -11,6 +11,12 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Fredoka', Arial, sans-serif;
+    /* Ton image de fond personnalisée */
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('yokai-background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Effet parralax sympa */
+    
     background-color: #2c3e50; /* Couleur de fond de secours */
 }
 
@@ -74,12 +80,6 @@ nav .logo a:hover {
 header {
     height: 100vh; /* Prend 100% de la hauteur de l'écran */
     width: 100%;
-    /* Ton image de fond personnalisée */
-    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('yokai-background.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* Effet parralax sympa */
-    
     display: flex;
     justify-content: center;
     align-items: center;
