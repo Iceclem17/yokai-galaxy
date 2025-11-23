@@ -86,8 +86,9 @@
     min-height: 0vh;
   }
 
-  h2 {
+  h1 {
     text-align: center;
+    font-size: 3rem;
   }
   
   @media (max-width: 450px) {
@@ -109,6 +110,12 @@
   @media (min-width: 340px) and (max-width: 439px) {
     .yokai-cell .name {
       font-size: 0.75em;
+    }
+  }
+
+  @media (max-width: 340px) {
+    #game p {
+      font-size: 0.98em;
     }
   }
   
