@@ -65,7 +65,7 @@ nav a {
     color: #ecf0f1;
     text-decoration: none;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 1.1rem;
     padding: 8px 10px;
     border-radius: 20px;
     transition: all 0.3s ease;
@@ -161,4 +161,16 @@ header {
         margin: 10px;
         padding: 15px;
     }
+}
+
+@media screen and (max-width: 384px) {
+  nav a{
+      font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  nav a{
+      font-size: 0.8rem;
+  }
 }
