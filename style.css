@@ -162,6 +162,8 @@ h1 {
     font-size: 3.5rem;
     margin-top: 0;
     margin-bottom: 20px;
+    padding: 8px;
+    padding-bottom: 0px;
     /* Dégradé sur le texte */
     background: linear-gradient(45deg, #ff3e3e, #9b3eff);
     -webkit-background-clip: text;
