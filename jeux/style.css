@@ -15,7 +15,7 @@ body {
     
     /* 3. LE BACKGROUND FIXE EST DÉPLACÉ ICI */
     /* L'image est sur le body, donc elle est tout le temps là */
-    background: url('../images/yokai-background.png'); 
+    background: url('/images/yokai-background.png'); 
     background-size: cover;       /* Couvre tout l'écran */
     background-position: center;  /* Centré */
     background-attachment: fixed; /* MAGIQUE : L'image ne bouge pas au scroll */
@@ -85,7 +85,7 @@ nav .logo a:hover {
 }
 
 /* ============ HEADER & CONTENU ============ */
-header {
+header:not([id="main"]) {
     /* J'ai enlevé le background ici car il est maintenant sur le body */
     /* J'ai enlevé height: 100vh pour que le header s'adapte à la taille du contenu */
     min-height: 100vh; 
@@ -98,6 +98,14 @@ header {
     padding-bottom: 50px;
 }
 
+header#main {
+    height: 100vh; /* Prend 100% de la hauteur de l'écran */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .principal {
     padding: 30px;
     margin: 20px;
@@ -106,6 +114,30 @@ header {
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
     text-align: center;
     /*max-width: 1000px; /* Limite la largeur pour que ce soit joli */
+}
+
+.principal#main{
+    padding: 50px;
+    margin: 20px;
+    max-width: 700px;
+    width: 90%;
+    
+    /* L'effet "Glassmorphism" (Verre dépoli) */
+    background-color: rgba(255, 255, 255, 0.85); 
+    backdrop-filter: blur(12px); 
+    -webkit-backdrop-filter: blur(12px);
+    
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    
+    text-align: center;
+    color: #2c3e50; /* Texte sombre pour contraster avec le fond clair */
+    
+    /* Animation d'entrée */
+    animation: floatUp 1s ease-out forwards;
+    opacity: 0;
+    transform: translateY(30px);
 }
 
 .principal h1 {
