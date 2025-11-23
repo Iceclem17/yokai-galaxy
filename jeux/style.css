@@ -108,9 +108,40 @@ header {
     /*max-width: 1000px; /* Limite la largeur pour que ce soit joli */
 }
 
+.principal h1 {
+    font-family: 'Bangers', cursive;
+    font-size: 3.5rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    /* Dégradé sur le texte */
+    background: linear-gradient(45deg, #ff3e3e, #9b3eff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+}
+
+.principal h2 {
+    font-family: 'Bangers', cursive;
+    font-size: 3rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    /* Dégradé sur le texte */
+    background: linear-gradient(45deg, #13b0e0, #8d0fc7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+}
+
 .principal h4 {
-    margin-top: 10px;
+    font-size: 1.3rem;
+    line-height: 1.6;
     font-weight: 400;
+    margin: 0;
+}
+
+.principal b {
+    color: #2980b9; /* Bleu pour les mots clés importants */
+    font-weight: 600;
 }
 
 /* ============ IMAGES JEUX ============ */
@@ -125,6 +156,14 @@ header {
 
 .principal .jeux img:hover {
     transform: scale(1.02);
+}
+
+/* Animation Keyframes */
+@keyframes floatUp {
+    to {
+opacity: 1;
+transform: translateY(0);
+    }
 }
 
 /* ============ RESPONSIVE ============ */
@@ -145,8 +184,8 @@ header {
         flex-wrap: wrap;
         justify-content: center;
     }
-    header {
-        padding-top: 140px; /* Plus d'espace car la nav est plus haute en mobile */
+    .principal h1 {
+        font-size: 2.5rem;
     }
 }
 
@@ -160,6 +199,12 @@ header {
     .principal {
         margin: 10px;
         padding: 15px;
+    }
+}
+
+@media (max-width: 425px) {
+  .principal {
+        padding: 10px;
     }
 }
 
