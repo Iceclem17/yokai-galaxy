@@ -1,97 +1,6 @@
-html{
-    scroll-behavior:smooth;
-  }
-  
-  body{
-    margin: 0;
-    padding:0;
-    font-family: Arial, sans-serif;
-    background-color: #bababa;
-  }
-  
-  header{
-    height:100vh;
-    background: url('images/image-bg.jpg');
-    background-position: center;
-    color: #fff;
-    text-align:center;
-  }
-  
-  /* ============ BARRE DE NAVIGATION ============ */
-nav {
-    display: flex;
-    justify-content: space-between; /* Espace entre le logo et les liens */
-    align-items: center;
-    padding: 15px 40px;
-    background-color: rgba(30, 30, 30, 0.95); /* Fond sombre semi-transparent */
-    backdrop-filter: blur(5px);
-    position: fixed; /* Reste collé en haut */
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    border-bottom: 2px solid #3d3d3d;
-}
-
-/* Le côté gauche (Logo/Accueil) */
-nav .logo a {
-    font-family: 'Bangers', cursive;
-    font-size: 1.5rem;
-    letter-spacing: 1px;
-    color: #ffffff; /* Yo-Kai Galaxy en BLANC */
-    text-transform: uppercase;
-    text-shadow: 0 0 5px rgba(255,255,255,0.5); /* Petite ombre blanche pour ressortir */
-}
-
-/* Le côté droit (Les onglets) */
-nav .onglets {
-    display: flex;
-    gap: 20px;
-}
-
-nav a {
-    color: #ecf0f1;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1rem;
-    padding: 8px 15px;
-    border-radius: 20px;
-    transition: all 0.3s ease;
-}
-
-/* Effet au survol des liens */
-nav .onglets a:hover {
-    background-color: #3498db; /* Bleu style Whisper */
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(52, 152, 219, 0.4);
-}
-
-nav .logo a:hover {
-    text-shadow: 0 0 15px #ffffff;
-    background: none;
-    transform: scale(1.05);
-}
-
-  header .principal{
-    margin-top: 50px;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    color: #000;
-  }
-
   header .principal h4{
     align-items: center;
   }
-
-  .principal {
-    padding: 15px;
-    margin: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
   
 .principal .pieces img {
   width: 5vw;
@@ -129,7 +38,9 @@ nav .logo a:hover {
   margin: 0px;
 }
 
-
+header:not([id="main"]) {
+  display: block;
+}
 
 @media screen and (max-width: 1100px) and (min-width: 750px) {
   .principal .pieces img {
@@ -161,12 +72,6 @@ nav .logo a:hover {
   h1 {
     font-size: 8vw;
   }
-  header .principal {
-    padding: 5px;
-    margin: 5px;
-    margin-top: 10px;
-    border-radius: 4px;
-  }
   .principal .item {
     margin: 0px;
     padding: 0px;
@@ -186,12 +91,6 @@ nav .logo a:hover {
   }
   h1 {
     font-size: 8vw;
-  }
-  header .principal {
-    padding: 5px;
-    margin: 5px;
-    margin-top: 10px;
-    border-radius: 4px;
   }
   .principal .item {
     margin: 0px;

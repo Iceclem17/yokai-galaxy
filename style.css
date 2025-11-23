@@ -86,8 +86,6 @@ nav .logo a:hover {
 
 /* ============ HEADER & CONTENU ============ */
 header:not([id="main"]) {
-    /* J'ai enlevé le background ici car il est maintenant sur le body */
-    /* J'ai enlevé height: 100vh pour que le header s'adapte à la taille du contenu */
     min-height: 100vh; 
     
     display: flex;
