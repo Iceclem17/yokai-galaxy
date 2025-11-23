@@ -15,7 +15,7 @@ body {
     
     /* 3. LE BACKGROUND FIXE EST DÉPLACÉ ICI */
     /* L'image est sur le body, donc elle est tout le temps là */
-    background: url('/images/yokai-background.png'); 
+    background: url('/yokai-galaxy/images/yokai-background.png'); 
     background-size: cover;       /* Couvre tout l'écran */
     background-position: center;  /* Centré */
     background-attachment: fixed; /* MAGIQUE : L'image ne bouge pas au scroll */
