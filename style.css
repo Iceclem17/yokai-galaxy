@@ -4,6 +4,25 @@
     box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Bangers';
+  src: url('styles/fonts/bangers-v25-latin-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fredoka';
+  src: url('styles/fonts/fredoka-v17-latin-regular.woff2') format('woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Fredoka';
+  src: url('styles/fonts/fredoka-v17-latin-600.woff2') format('woff2');
+  font-weight: 600;
+}
+
 html {
     scroll-behavior: smooth;
 }
