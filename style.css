@@ -157,7 +157,7 @@ header#main {
     transform: translateY(30px);
 }
 
-.principal h1 {
+h1 {
     font-family: 'Bangers', cursive;
     font-size: 3.5rem;
     margin-top: 0;
@@ -169,7 +169,7 @@ header#main {
     text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
 }
 
-.principal h2 {
+h2 {
     font-family: 'Bangers', cursive;
     font-size: 3rem;
     margin-top: 0;
