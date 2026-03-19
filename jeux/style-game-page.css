@@ -11,12 +11,13 @@
 }
 
 .principal .button img {
-  width: 5vw;
-  height: auto;
-  margin: auto;
-  margin-left: 0px;
-  padding: 5px;
-  display: block;
+  width: 5vw;              /* largeur de l'image relative à la largeur de l'écran */
+  aspect-ratio: 1 / 1;     /* force un format carré */
+  object-fit: contain;     /* adapte l'image sans la couper (peut laisser des espaces) */
+  margin: auto;            /* centre horizontalement (globalement) */
+  margin-left: 0px;        /* annule le centrage à gauche */
+  padding: 5px;            /* espace intérieur autour de l'image */
+  display: block;          /* enlève le comportement inline de l'image */
 }
 
 .principal .item {
