@@ -256,8 +256,11 @@ transform: translateY(0);
 }
 
 @media (max-width: 425px) {
-  .principal {
+    .principal {
         padding: 10px;
+    }
+    .principal h4 {
+        font-size: 0.9rem;
     }
 }
 
