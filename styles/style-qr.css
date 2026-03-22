@@ -41,7 +41,8 @@ html{
 .principal .titre img {
   width: 4vw;
   margin: auto;
-  margin-left: 5px;
+  margin-left: 6px;
+  margin-top: 6px;
 }
   
 .principal .pieces img {
