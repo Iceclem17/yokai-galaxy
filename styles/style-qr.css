@@ -38,11 +38,18 @@ html{
   margin: auto;
 }
 
-.principal .titre img {
-  width: 4vw;
-  margin: auto;
-  margin-left: 6px;
-  margin-top: 6px;
+.principal h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;         /* permet à l'img de tomber si besoin */
+}
+
+.principal h2 img {
+  width: 1em;
+  object-fit: contain;
+  margin-left: 8px;
+  flex-shrink: 0;
 }
   
 .principal .pieces img {
@@ -65,16 +72,10 @@ header:not([id="main"]) {
   .principal .pieces img {
     width: 10vw;
   }
-  .principal .titre img {
-    width: 5vw;
-  }
 }
 
 @media screen and (max-width: 750px) and (min-width: 533px) {
   .principal .pieces img {
-    width: 10vw;
-  }
-  .principal .titre img {
     width: 10vw;
   }
   p {
@@ -87,9 +88,6 @@ header:not([id="main"]) {
 @media screen and (max-width: 533px) and (min-width: 376px) {
   .principal .pieces img {
     width: 14vw;
-  }
-  .principal .titre img {
-    width: 8vw;
   }
   p {
     font-size: 3vw;
@@ -110,9 +108,6 @@ header:not([id="main"]) {
 @media screen and (max-width: 376px) {
   .principal .pieces img {
     width: 16vw;
-  }
-  .principal .titre img {
-    width: 10vw;
   }
   p {
     font-size: 3vw;
