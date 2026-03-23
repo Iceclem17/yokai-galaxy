@@ -126,6 +126,7 @@ header#main {
 .principal {
     padding: 30px;
     margin: 20px;
+    margin-top: clamp(20px, calc(130px - 10vw), 130px);
     background-color: rgba(255, 255, 255, 0.9); /* Un peu transparent pour voir le fond */
     border-radius: 15px; /* Coins plus ronds */
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
@@ -134,8 +135,6 @@ header#main {
 }
 
 .principal#main{
-    padding: 50px;
-    margin: 20px;
     max-width: 700px;
     width: 90%;
     
@@ -252,6 +251,7 @@ transform: translateY(0);
     .principal {
         margin: 10px;
         padding: 15px;
+        margin-top: clamp(20px, calc(270px - 10vw), 250px);
     }
 }
 
