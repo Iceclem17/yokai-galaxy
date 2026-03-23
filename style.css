@@ -251,6 +251,11 @@ transform: translateY(0);
     .principal {
         margin: 10px;
         padding: 15px;
+    }
+}
+
+@media (min-width: 425px) and (max-width: 750px) {
+    .principal {
         margin-top: clamp(20px, calc(270px - 10vw), 250px);
     }
 }
