@@ -109,8 +109,8 @@ header:not([id="main"]) {
     
     display: flex;
     flex-direction: column;
-    align-items: center; /*Centre verticalement si peu de contenu */
-    justify-content: center;  
+    align-items: center;
+    justify-content: center;  /*Centre verticalement si peu de contenu */
     padding-top: 100px; /* IMPORTANT : Pour ne pas être caché par la navbar fixe */
     padding-bottom: 50px;
 }
@@ -120,13 +120,13 @@ header#main {
     width: 100%;
     display: flex;
     justify-content: center;
-    /*align-items: center; Centre verticalement si peu de contenu */
+    align-items: center;
 }
 
 .principal {
     padding: 30px;
     margin: 20px;
-    margin-top: 130px;
+    margin-top: 80px;
     background-color: rgba(255, 255, 255, 0.9); /* Un peu transparent pour voir le fond */
     border-radius: 15px; /* Coins plus ronds */
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
@@ -256,14 +256,14 @@ transform: translateY(0);
 
 @media (min-width: 425px) and (max-width: 750px) {
     .principal {
-        margin-top: 220px;
+        margin-top: 100px;
     }
 }
 
 @media (max-width: 425px) {
     .principal {
         padding: 10px;
-        margin-top: 110px;
+        margin-top: 80px;
     }
     .principal h4 {
         font-size: 0.9rem;
