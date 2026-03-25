@@ -104,24 +104,14 @@ nav .logo a:hover {
 }
 
 /* ============ HEADER & CONTENU ============ */
-header:not([id="main"]) { /* HEADER des autres page que le HOME */
-    min-height: 100vh; 
-    
+header { /* HEADER des autres page que le HOME */
+    min-height: 100vh;    
     display: flex;
     flex-direction: column;
     align-items: center; /*Centre verticalement si peu de contenu */
-    justify-content: center;  
+    justify-content: flex-start; 
     padding-top: 100px; /* IMPORTANT : Pour ne pas être caché par la navbar fixe */
     padding-bottom: 50px;
-}
-
-header#main { /* HEADER du HOME */
-    height: 100vh; /* Prend 100% de la hauteur de l'écran */
-    width: 100%;
-    display: grid;
-    justify-content: center;
-    align-content: start;
-    padding-top: 100px; /* IMPORTANT : Pour ne pas être caché par la navbar fixe */
 }
 
 .principal {
