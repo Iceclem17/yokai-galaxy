@@ -104,23 +104,23 @@ nav .logo a:hover {
 }
 
 /* ============ HEADER & CONTENU ============ */
-header:not([id="main"]) {
+header:not([id="main"]) { /* HEADER des autres page que le HOME */
     min-height: 100vh; 
     
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;  /*Centre verticalement si peu de contenu */
+    align-items: center; /*Centre verticalement si peu de contenu */
+    justify-content: center;  
     padding-top: 100px; /* IMPORTANT : Pour ne pas être caché par la navbar fixe */
     padding-bottom: 50px;
 }
 
-header#main {
+header#main { /* HEADER du HOME */
     height: 100vh; /* Prend 100% de la hauteur de l'écran */
     width: 100%;
-    display: flex;
+    display: grid;
     justify-content: center;
-    align-items: center;
+    padding-top: 100px; /* IMPORTANT : Pour ne pas être caché par la navbar fixe */
 }
 
 .principal {
@@ -136,7 +136,6 @@ header#main {
 
 .principal#main{
     max-width: 700px;
-    width: 90%;
     
     /* L'effet "Glassmorphism" (Verre dépoli) */
     background-color: rgba(255, 255, 255, 0.85); 
