@@ -126,7 +126,6 @@ header#main { /* HEADER du HOME */
 .principal {
     padding: 30px;
     margin: 20px;
-    margin-top: 80px;
     background-color: rgba(255, 255, 255, 0.9); /* Un peu transparent pour voir le fond */
     border-radius: 15px; /* Coins plus ronds */
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
@@ -253,16 +252,9 @@ transform: translateY(0);
     }
 }
 
-@media (min-width: 425px) and (max-width: 750px) {
-    .principal {
-        margin-top: 100px;
-    }
-}
-
 @media (max-width: 425px) {
     .principal {
         padding: 10px;
-        margin-top: 80px;
     }
     .principal h4 {
         font-size: 0.9rem;
