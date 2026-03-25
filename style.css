@@ -120,6 +120,7 @@ header#main { /* HEADER du HOME */
     width: 100%;
     display: grid;
     justify-content: center;
+    align-content: start;
     padding-top: 100px; /* IMPORTANT : Pour ne pas être caché par la navbar fixe */
 }
 
