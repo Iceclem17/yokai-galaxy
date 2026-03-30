@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pièces de couleurs - Qr-Codes - Yo-kai Watch Blasters - Yo-kai Galaxy</title>
+    <link rel="icon" type="image/png" href="../../../../images/icon.png" />
+    <link href="../../../../style.css" rel="stylesheet">
+    <link href="../../../../styles/style-qr.css" rel="stylesheet">
+    
+    <script src="data/crypto-js.min.js"></script>
+    <script src="data/qrcode.min.js"></script>
+    
+    <style>
+        .pieces canvas, .pieces img {
+            display: block;
+            margin: 0 auto;
+            border: 4px solid #fff;
+            border-radius: 8px;
+        }
+        /* Style pour le texte de la variation */
+        .variation-display {
+            margin-top: 15px;
+            text-align: center;
+            font-family: 'YurukaStd', sans-serif;
+            /* Dégradé sur le texte */
+            background: linear-gradient(45deg, #13dce0, #460fc7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+      <script src="../script-nav-qr.js"></script>
+      <div id="navbar"></div>
+          <div class="principal">
+            <div class="titre">
+              <h2 id="titre-dynamique">Qr-Codes pour Pièce de couleur aléatoire 
+                  <img id="icon-variable" src="../../../../images/icones/piece-jaune.webp">
+              </h2>
+            </div>
+            <div class="pieces">
+                <div id="qr-target"></div>
+                <h3 id="variation-text" class="variation-display"></h3>
+            </div>
+          </div>
+    </header>
+
+    <script>
+    /* --- LOGIQUE DE GÉNÉRATION LEVEL-5 --- */
+    if(typeof level5 == 'undefined') level5 = {};
+    if(typeof level5.qr == 'undefined') level5.qr = {};
+
+    level5.qr.QRGenerator = class {
+      static B32TABLE = 'GN5BH8QJSAC0MFR6P4VET1O7K9U2LD3I';
+      static IN_TABLE = '0123456789abcdefghijklmnopqrstuv';
+      static wordArrayToU8(wa) {
+        const len = wa.sigBytes; const words = wa.words; const u8 = new Uint8Array(len);
+        for (let i = 0; i < len; i++) u8[i] = (words[i >>> 2] >>> (24 - (i % 4) * 8)) & 0xff;
+        return u8;
+      }
+      static u8ToWordArray(u8arr) {
+        const words = [];
+        for (let i = 0; i < u8arr.length; i++) {
+          const wi = i >>> 2; if (words[wi] === undefined) words[wi] = 0;
+          words[wi] |= u8arr[i] << (24 - (i % 4) * 8);
+        }
+        return CryptoJS.lib.WordArray.create(words, u8arr.length);
+      }
+      static modB32Encode(bytes) {
+        const hex = Array.from(bytes).map(b => b.toString(16).padStart(2, '0')).join('');
+        const inBuf = Array.from(hex).map(ch => level5.qr.QRGenerator.IN_TABLE.indexOf(ch.toLowerCase()));
+        const out = []; let bitPos = 0, bufPos = 0;
+        while (bufPos < inBuf.length) {
+          let a = inBuf[bufPos] << 28;
+          if (bufPos + 1 < inBuf.length) a |= inBuf[bufPos + 1] << 24;
+          a >>>= (27 - bitPos); a &= 31;
+          if (bufPos + 1 >= inBuf.length) a >>>= 2;
+          out.push(level5.qr.QRGenerator.B32TABLE[a]);
+          bitPos += 5; while (bitPos >= 4) bitPos -= 4, bufPos++;
+        }
+        return out.join('');
+      }
+      calcHash(codeU8) {
+        let codeWA = level5.qr.QRGenerator.u8ToWordArray(codeU8);
+        let lastDigestBytes;
+        for (const key of this.keys) {
+          const keyWA = CryptoJS.enc.Latin1.parse(key);
+          const hmacWA = CryptoJS.HmacMD5(codeWA, keyWA);
+          lastDigestBytes = level5.qr.QRGenerator.wordArrayToU8(hmacWA);
+          codeWA = CryptoJS.enc.Latin1.parse(hmacWA.toString(CryptoJS.enc.Hex).toLowerCase());
+        }
+        return level5.qr.QRGenerator.modB32Encode(lastDigestBytes);
+      }
+      gen(pattern) {
+        const up = pattern.toUpperCase();
+        return up + this.calcHash(new TextEncoder().encode(up));
+      }
+    };
+
+    level5.qr.V2QRGenerator = class extends level5.qr.QRGenerator {
+      get typeLen() { return 3; } get varLen() { return 4; }
+      get keys() { return ['OYD78+MIP3', 'N+Q09V7LI5']; }
+    };
+
+    /* --- GESTION DE L'ANIMATION DES ICÔNES --- */
+    const icones = [
+        "piece-rouge", "piece-jaune", "piece-orange", "piece-rose", 
+        "piece-verte", "piece-bleue", "piece-mauve", "piece-bleu-ciel"
+    ];
+    let currentIconIndex = 0;
+
+    function animerIcone() {
+        const imgElement = document.getElementById('icon-variable');
+        currentIconIndex = (currentIconIndex + 1) % icones.length;
+        imgElement.src = `../../../../images/icones/${icones[currentIconIndex]}.webp`;
+    }
+
+    /* --- INITIALISATION --- */
+    function getRandomVariation() {
+        const chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        let res = "";
+        for (let i = 0; i < 4; i++) res += chars.charAt(Math.floor(Math.random() * chars.length));
+        return res;
+    }
+
+    window.onload = function() {
+        // 1. Lancement de l'animation de l'icône (toutes les 500ms)
+        setInterval(animerIcone, 500);
+
+        // 2. Génération du QR Code
+        const type = "JXO";
+        const variation = getRandomVariation();
+        const v2Gen = new level5.qr.V2QRGenerator();
+        const encryptedData = v2Gen.gen(type + variation);
+        const finalURL = 'n123git.sayshi/' + encryptedData;
+
+        const container = document.getElementById("qr-target");
+        new QRCode(container, {
+            text: finalURL,
+            width: 256,
+            height: 256,
+            colorDark : "#000000",
+            colorLight : "#ffffff",
+            correctLevel : QRCode.CorrectLevel.M
+        });
+
+        // 3. Affichage de la variation en H3
+        document.getElementById('variation-text').innerText = `Variation : ${variation}`;
+    };
+    </script>
+</body>
+</html>

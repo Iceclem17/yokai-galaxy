@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>JXO Random Generator</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            height: 100vh; margin: 0; background-color: #e3f2fd;
+        }
+        .container {
+            background: white; padding: 30px; border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1); text-align: center; border: 4px solid #2196F3;
+        }
+        #qrcode-container {
+            background: white; padding: 15px; border: 2px solid #ddd;
+            margin: 20px 0; display: inline-block; min-width: 200px; min-height: 200px;
+        }
+        h1 { color: #1976D2; margin-top: 0; }
+        .info { font-weight: bold; color: #555; font-size: 1.2rem; }
+        .hint { color: #888; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Loterie JXO</h1>
+        <div class="info" id="code-info">Génération en cours...</div>
+        <div id="qrcode-container"></div>
+        <p class="hint">Appuie sur <b>F5</b> pour une nouvelle variation !</p>
+    </div>
+
+    <script src="data/crypto-js.min.js"></script>
+    <script src="data/qrcode.min.js"></script>
+    <script src="data/jsQR.js"></script>
+
+<script>
+// --- LE MOTEUR DE CALCUL (Ton code source) ---
+if(typeof level5 == 'undefined') level5 = {};
+if(typeof level5.qr == 'undefined') level5.qr = {};
+
+level5.qr.QRGenerator = class {
+  static B32TABLE = 'GN5BH8QJSAC0MFR6P4VET1O7K9U2LD3I';
+  static IN_TABLE = '0123456789abcdefghijklmnopqrstuv';
+  
+  static wordArrayToU8(wa) {
+    const len = wa.sigBytes; const words = wa.words; const u8 = new Uint8Array(len);
+    for (let i = 0; i < len; i++) u8[i] = (words[i >>> 2] >>> (24 - (i % 4) * 8)) & 0xff;
+    return u8;
+  }
+  static u8ToWordArray(u8arr) {
+    const words = [];
+    for (let i = 0; i < u8arr.length; i++) {
+      const wi = i >>> 2; if (words[wi] === undefined) words[wi] = 0;
+      words[wi] |= u8arr[i] << (24 - (i % 4) * 8);
+    }
+    return CryptoJS.lib.WordArray.create(words, u8arr.length);
+  }
+  static modB32Encode(bytes) {
+    const hex = Array.from(bytes).map(b => b.toString(16).padStart(2, '0')).join('');
+    const inBuf = Array.from(hex).map(ch => level5.qr.QRGenerator.IN_TABLE.indexOf(ch.toLowerCase()));
+    const out = []; let bitPos = 0, bufPos = 0;
+    while (bufPos < inBuf.length) {
+      let a = inBuf[bufPos] << 28;
+      if (bufPos + 1 < inBuf.length) a |= inBuf[bufPos + 1] << 24;
+      a >>>= (27 - bitPos); a &= 31;
+      if (bufPos + 1 >= inBuf.length) a >>>= 2;
+      out.push(level5.qr.QRGenerator.B32TABLE[a]);
+      bitPos += 5; while (bitPos >= 4) bitPos -= 4, bufPos++;
+    }
+    return out.join('');
+  }
+  calcHash(codeU8) {
+    let codeWA = level5.qr.QRGenerator.u8ToWordArray(codeU8);
+    let lastDigestBytes;
+    for (const key of this.keys) {
+      const keyWA = CryptoJS.enc.Latin1.parse(key);
+      const hmacWA = CryptoJS.HmacMD5(codeWA, keyWA);
+      lastDigestBytes = level5.qr.QRGenerator.wordArrayToU8(hmacWA);
+      codeWA = CryptoJS.enc.Latin1.parse(hmacWA.toString(CryptoJS.enc.Hex).toLowerCase());
+    }
+    return level5.qr.QRGenerator.modB32Encode(lastDigestBytes);
+  }
+  gen(pattern) {
+    const up = pattern.toUpperCase();
+    return up + this.calcHash(new TextEncoder().encode(up));
+  }
+};
+
+level5.qr.V2QRGenerator = class extends level5.qr.QRGenerator {
+  get typeLen() { return 3; } get varLen() { return 4; }
+  get keys() { return ['OYD78+MIP3', 'N+Q09V7LI5']; }
+};
+
+// --- TA LOGIQUE DE LOTERIE ---
+function getRandomVariation() {
+    const chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let res = "";
+    for (let i = 0; i < 4; i++) res += chars.charAt(Math.floor(Math.random() * chars.length));
+    return res;
+}
+
+window.onload = function() {
+    const type = "JXO";
+    const variation = getRandomVariation();
+    
+    // Initialisation du générateur V2
+    const v2Gen = new level5.qr.V2QRGenerator();
+    
+    // Génération de la chaîne cryptée
+    const pattern = type + variation;
+    const encryptedData = v2Gen.gen(pattern);
+    
+    // Affichage des infos
+    document.getElementById('code-info').innerText = `Type: ${type} | Var: ${variation}`;
+
+    // Création du QR Code
+    const finalURL = 'n123git.sayshi/' + encryptedData;
+    new QRCode(document.getElementById("qrcode-container"), {
+        text: finalURL,
+        width: 200,
+        height: 200,
+        correctLevel : QRCode.CorrectLevel.M
+    });
+};
+</script>
+</body>
+</html>

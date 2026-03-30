@@ -23,6 +23,12 @@
   font-weight: 600;
 }
 
+@font-face {
+  font-family: 'YurukaStd';
+  src: url('styles/fonts/FOT-YurukaStd-UB.otf') format('opentype');
+  font-weight: 400;
+}
+
 html {
     scroll-behavior: smooth;
 }
