@@ -36,10 +36,22 @@
 
 .principal .text p {
   margin: 0px;
+  padding-left: 3px; /* Pour que les icones ne touches pas les textes des items */
+}
+
+p#category { /* Pour les titres entre les catégories d'items (ex : <tr><td colspan="2"><p id="category">Équipements :</p></td></tr>) */
+    text-align: start;
+    padding-left: 15px;
+    margin-bottom: 5px;
+    text-decoration: underline;
 }
 
 header:not([id="main"]) {
   display: block;
+}
+
+tr {
+  vertical-align: baseline; /* Pour aligner vers le haut les items dans la liste des qr codes (items de tailles différentes) */
 }
 
 @media screen and (max-width: 1100px) and (min-width: 750px) {
@@ -77,6 +89,9 @@ header:not([id="main"]) {
     padding: 0px;
     border-radius: 10px;
   }
+  p#category {
+    padding-left: 5px;
+  }
 }
 
 @media screen and (max-width: 376px) {
@@ -96,5 +111,8 @@ header:not([id="main"]) {
     margin: 0px;
     padding: 0px;
     border-radius: 10px;
+  }
+  p#category {
+    padding-left: 5px;
   }
 }
